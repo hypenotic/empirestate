@@ -1,7 +1,7 @@
 <template>
 	<nav class="uk-navbar">
 		<div class="uk-navbar-left">
-			<router-link to="/">Empire State Connector</router-link>
+			<router-link to="/">Insert Logo Here</router-link>
 		</div>
 		<div class="uk-navbar-right">
 			<ul class="uk-navbar-nav">

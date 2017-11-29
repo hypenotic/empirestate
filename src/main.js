@@ -3,7 +3,8 @@ import VueRouter from 'vue-router';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import { routes } from './routes';
-
+import VueParticles from 'vue-particles';
+Vue.use(VueParticles);
 Vue.use(VueRouter, VueAxios, axios);
 
 // Vue.axios.defaults.headers.common['X-WP-Nonce'] = wp_api_vuejs_poc.nonce;

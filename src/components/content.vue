@@ -1,6 +1,6 @@
 <template>
-    <div class="uk-container uk-container-expand">
-        <div>Content</div>
+    <div class="uk-container uk-container-expand content-block">
+        <div>Sub-head goes here</div>
     </div>
 </template>
 
@@ -26,3 +26,8 @@
         }
     }
 </script>
+
+<style>
+.content-block {
+}
+</style>

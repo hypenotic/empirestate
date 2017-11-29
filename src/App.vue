@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="uk-container uk-container-expand">
+        <div class="uk-container uk-container-expand nav-container">
             <app-nav v-bind:menu-links="menuLinks"></app-nav>
         </div>
         <transition name="fade">
@@ -62,6 +62,14 @@
               axios.get('http://dev.hypenotic.com/cms-empire/wp-json/wp/v2/pages?_embed')
               .then(function (response) {
                 app.pages = response.data;
+                for (let page of response.data) {
+                    console.log(page.slug);
+                    if (page.slug == 'home') {
+                        console.log('found it');
+                        app.homePage = page;
+                        break;
+                    }
+                };
                 // console.log(response.data);
               })
               .catch(function (error) {
@@ -73,6 +81,24 @@
 </script>
 
 <style>
+*, :after, :before {
+box-sizing: border-box;
+}
+
+html, body {
+height: 100%;
+}
+
+body {
+margin: 0;
+/* background: #34393f; */
+}
+
+.nav-container {
+    position: relative;
+    z-index: 500;
+}
+
 .fade-enter-active, .fade-leave-active {
   transition-property: opacity;
   transition-duration: .25s;
