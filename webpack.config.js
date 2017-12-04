@@ -51,12 +51,6 @@ if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
-    new PrerenderSpaPlugin(
-      // Path to compiled app
-      path.join(__dirname, './dist'),
-      // List of endpoints you wish to prerender
-      [ '/','/home','/about', '/contact' ]
-    ),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'

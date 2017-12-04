@@ -11,8 +11,7 @@ Vue.use(VueRouter, VueAxios, axios);
 
 const router = new VueRouter({
 	routes,
-	mode: 'history',
-	base: '/esc/'
+	mode: 'history'
 });
 
 import App from './App.vue';

@@ -1059,9 +1059,15 @@ module.exports = function bind(fn, thisArg) {
 
 const routes = [
 // ==== DEV ====
-{ path: '', component: __WEBPACK_IMPORTED_MODULE_0__components_Home_vue___default.a, props: true }, { path: '/', component: __WEBPACK_IMPORTED_MODULE_0__components_Home_vue___default.a, props: true }, { path: '/about', component: __WEBPACK_IMPORTED_MODULE_1__components_About_vue___default.a, props: true }, { path: '/services', component: __WEBPACK_IMPORTED_MODULE_2__components_Services_vue___default.a, props: true }, { path: '/process', component: __WEBPACK_IMPORTED_MODULE_3__components_Process_vue___default.a, props: true }, { path: '/contact', component: __WEBPACK_IMPORTED_MODULE_4__components_Contact_vue___default.a, props: true }, { path: '/blog', component: __WEBPACK_IMPORTED_MODULE_5__components_blog_Blog_vue___default.a, props: true }, { path: '*', redirect: '/esc' },
-// ==== HYPE ====
-{ path: '/esc', component: __WEBPACK_IMPORTED_MODULE_0__components_Home_vue___default.a, props: true }, { path: '/esc/about', component: __WEBPACK_IMPORTED_MODULE_1__components_About_vue___default.a, props: true }, { path: '/esc/services', component: __WEBPACK_IMPORTED_MODULE_2__components_Services_vue___default.a, props: true }, { path: '/esc/process', component: __WEBPACK_IMPORTED_MODULE_3__components_Process_vue___default.a, props: true }, { path: '/esc/contact', component: __WEBPACK_IMPORTED_MODULE_4__components_Contact_vue___default.a, props: true }, { path: '/esc/blog', component: __WEBPACK_IMPORTED_MODULE_5__components_blog_Blog_vue___default.a, props: true }];
+{ path: '', component: __WEBPACK_IMPORTED_MODULE_0__components_Home_vue___default.a, props: true }, { path: '/', component: __WEBPACK_IMPORTED_MODULE_0__components_Home_vue___default.a, props: true }, { path: '/about', component: __WEBPACK_IMPORTED_MODULE_1__components_About_vue___default.a, props: true }, { path: '/services', component: __WEBPACK_IMPORTED_MODULE_2__components_Services_vue___default.a, props: true }, { path: '/process', component: __WEBPACK_IMPORTED_MODULE_3__components_Process_vue___default.a, props: true }, { path: '/contact', component: __WEBPACK_IMPORTED_MODULE_4__components_Contact_vue___default.a, props: true }, { path: '/blog', component: __WEBPACK_IMPORTED_MODULE_5__components_blog_Blog_vue___default.a, props: true }, { path: '*', redirect: '/'
+	// ==== HYPE ====
+	// { path: '/esc', component: Home, props: true },
+	// { path: '/esc/about', component: About, props: true },
+	// { path: '/esc/services', component: Services, props: true },
+	// { path: '/esc/process', component: Process, props: true },
+	// { path: '/esc/contact', component: Contact, props: true },
+	// { path: '/esc/blog', component: Blog, props: true }
+}];
 /* harmony export (immutable) */ exports["a"] = routes;
 
 
@@ -17599,8 +17605,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
 
 const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
 	routes: __WEBPACK_IMPORTED_MODULE_4__routes__["a" /* routes */],
-	mode: 'history',
-	base: '/esc/'
+	mode: 'history'
 });
 
 
