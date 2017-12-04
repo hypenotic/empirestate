@@ -17599,7 +17599,8 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
 
 const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
 	routes: __WEBPACK_IMPORTED_MODULE_4__routes__["a" /* routes */],
-	mode: 'history'
+	mode: 'history',
+	base: '/esc/'
 });
 
 
