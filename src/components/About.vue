@@ -3,7 +3,6 @@
         <h1>The About Page</h1>
         <hr>
         <div v-html="selected.content.rendered"></div>
-
     </div>
 </template>
 

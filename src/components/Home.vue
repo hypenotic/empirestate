@@ -1,10 +1,11 @@
 <template>
-    <div class="uk-container uk-container-expand">
-        <div class="home-container" :style="{ 'background-image': 'url(' + selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url + ')'}"></div>
+    <div class="uk-container uk-container-expand home-component">
+        <div class="home-container" :style="{ 'background-image': 'url(' + selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url + ')'}"><div></div></div>
         <div class="overlay"></div>
         <div class="main-content">
-            <h1>Empire State<br/>Connector</h1>
-            <the-content :body-copy="selected"></the-content>
+            <h1 v-html="selected.meta_box.es_banner_heading"></h1>
+            <h2 v-html="selected.meta_box.es_banner_subheading"></h2>
+            <!-- <the-content :body-copy="selected"></the-content> -->
             <!-- <div v-html="selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url"></div> -->
             <!-- <img src="http://placehold.it/200x300"> -->
             <!-- <img :src="selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url"> -->
@@ -70,11 +71,7 @@
     }
 </script>
 
-<style scoped>
-
-.overlay {
-
-}
+<style lang="scss" scoped>
 
 .overlay::before {
     content:"";
@@ -85,7 +82,7 @@
     left: 0;
     width: 100%;
     z-index: 300;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .home-container{
@@ -96,14 +93,24 @@
     left:0;
     z-index: 200;
     background-size: cover;
-    background-position: bottom center;
+    background-position: top center;
 }
 
 h1 {
-    padding-top: 15%;
+    /* position: relative; */
+    padding-top: 5%;
     color: white;
-    font-size: 10vw;
-    line-height: 10vw;
+    font-size: 6vw;
+    line-height: 6vw;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: white;
+    text-align: left;
+}
+
+h2 {
+
 }
 
 .main-content {
@@ -111,7 +118,11 @@ h1 {
     position: relative;
     z-index: 500;
     display: inline-block;
+    width: 90%;
+    margin: 0 5%;
+    text-align: center;
 }
+
 #particles-js {
 /* background-image: url("./assets/sky.jpg"); */
 background-size: cover;
