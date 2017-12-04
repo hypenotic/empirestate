@@ -53,7 +53,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports.plugins = (module.exports.plugins || []).concat([
     new PrerenderSpaPlugin(
       // Path to compiled app
-      path.join(__dirname, '../dist'),
+      path.join(__dirname, './dist'),
       // List of endpoints you wish to prerender
       [ '/','/home','/about', '/contact' ]
     ),
