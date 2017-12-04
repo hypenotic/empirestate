@@ -1,5 +1,5 @@
 <template>
-	<div class="uk-container uk-container-expand">
+	<div class="uk-container uk-container-expand non-home-container">
         <h1>The Blog Page</h1>
         <hr>
         <div v-html="selected.content.rendered"></div>

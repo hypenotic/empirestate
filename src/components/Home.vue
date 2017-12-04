@@ -29,6 +29,7 @@
         >
         </vue-particles>
     </div>
+    <!-- <div v-else class="uk-container uk-container-expand home-component">LOADING</div> -->
 </template>
 
 <script>
@@ -43,7 +44,7 @@
                 featImage:""
             }
         },
-        props: ['pageList'],
+        props: ['pageList', 'loadCheck'],
         created: function() {
             console.log('home');
             this.getPage(this.pageList);

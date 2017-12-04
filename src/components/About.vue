@@ -9,7 +9,7 @@
 
 <script>
     export default {
-        props: ['pageList'],
+        props: ['pageList', 'loadCheck'],
         data: function () {
             return {
                 selected: []
