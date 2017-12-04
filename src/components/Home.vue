@@ -110,7 +110,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h2 {
-
+    margin-top: 10px;
+    width: 80%;
 }
 
 .main-content {
@@ -118,8 +119,8 @@ h2 {
     position: relative;
     z-index: 500;
     display: inline-block;
-    width: 90%;
-    margin: 0 5%;
+    width: 960px;
+    margin: 0 auto;
     text-align: center;
 }
 

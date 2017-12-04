@@ -12,7 +12,7 @@ export const routes = [
 	{ path: '/process', component: Process, props: true },
 	{ path: '/contact', component: Contact, props: true },
 	{ path: '/blog', component: Blog, props: true },
-	{ path: '', component: About, props: true },
+	{ path: '', component: Home, props: true },
 	{ path: '/', component: About, props: true },
 	{ path: '*', redirect: '/' }
 	// ==== HYPE ====

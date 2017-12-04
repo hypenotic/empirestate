@@ -1,5 +1,5 @@
 <template>
-    <div class="uk-container uk-container-expand">
+    <div class="uk-container uk-container-expand non-home-container">
         <h1>The About Page</h1>
         <hr>
         <p>Testing rendering of About page</p>

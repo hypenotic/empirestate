@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="uk-container uk-container-expand nav-container">
-            <app-nav v-bind:menu-links="menuLinks"></app-nav>
+            <app-nav v-bind:menu-links="menuLinks" v-bind:menu-color="dark"></app-nav>
         </div>
         <transition name="fade">
             <router-view :page-list="pages"></router-view>
@@ -20,6 +20,7 @@
         data: function () {
             return {
                 menuLinks: [],
+                menuColor: "",
                 pages: [],
                 homePage: [],
                 aboutPage: []    
@@ -97,6 +98,10 @@ margin: 0;
 .nav-container {
     position: relative;
     z-index: 500;
+}
+
+.non-home-container {
+    margin-top: 40px !important;
 }
 
 .fade-enter-active, .fade-leave-active {

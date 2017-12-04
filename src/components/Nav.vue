@@ -1,7 +1,8 @@
 <template>
 	<nav class="uk-navbar">
 		<div class="uk-navbar-left">
-			<router-link to="/">Insert Logo Here</router-link>
+			<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/empire_state_logo_green.png" alt="Empire State Connector" class="nav-logo"></router-link>
+			<router-link v-else to="/"><img src="../assets/empire_state_logo_white.png" alt="Empire State Connector" class="nav-logo"></router-link>
 		</div>
 		<div class="uk-navbar-right">
 			<ul class="uk-navbar-nav">
@@ -18,22 +19,28 @@
 	</nav>
 </template>
 
-// to="/dev/empire/"
-// :to="`/dev/empire/${link.object_slug}`"
-
 <script>
     import axios from 'axios';
     import VueAxios from 'vue-axios';
     export default {
-    	props: ['menuLinks'],
+    	props: ['menuLinks','menuColor'],
         data: function () {
             return {
                 // menuLinks: [] 
             }
-        },
+		},
         beforeCreate() {
         },
         methods: {
         }
     }
 </script>
+
+<style lang="scss" scoped>
+.uk-navbar-left .nav-logo {
+	max-height: 80px;
+	width: auto;
+	display: block;
+	margin-top: 20px;
+}
+</style>
