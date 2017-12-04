@@ -55,7 +55,7 @@ if (process.env.NODE_ENV === 'production') {
       // Path to compiled app
       path.join(__dirname, './dist'),
       // List of endpoints you wish to prerender
-      [ '/','/home','/about', '/contact' ]
+      [ '/','/home','/about', '/contact', '/esc','/esc/home','/esc/about', '/esc/contact' ]
     ),
     new webpack.DefinePlugin({
       'process.env': {
