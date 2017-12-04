@@ -7,13 +7,13 @@ import Blog 	from './components/blog/Blog.vue';
 
 export const routes = [
 	// ==== DEV ====
-	{ path: '', component: Home, props: true },
-	{ path: '/', component: Home, props: true },
 	{ path: '/about', component: About, props: true },
 	{ path: '/services', component: Services, props: true },
 	{ path: '/process', component: Process, props: true },
 	{ path: '/contact', component: Contact, props: true },
 	{ path: '/blog', component: Blog, props: true },
+	{ path: '', component: Home, props: true },
+	{ path: '/', component: Home, props: true },
 	{ path: '*', redirect: '/' }
 	// ==== HYPE ====
 	// { path: '/esc', component: Home, props: true },

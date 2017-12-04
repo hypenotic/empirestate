@@ -2,8 +2,8 @@
     <div class="uk-container uk-container-expand">
         <h1>The Contact Page</h1>
         <hr>
-        <div v-html="selected.content.rendered"></div>
-
+        <!-- <div v-html="selected.content.rendered"></div> -->
+        <p>Testing rendering of Contact page</p>
     </div>
 </template>
 

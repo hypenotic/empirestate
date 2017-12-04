@@ -1059,7 +1059,7 @@ module.exports = function bind(fn, thisArg) {
 
 const routes = [
 // ==== DEV ====
-{ path: '', component: __WEBPACK_IMPORTED_MODULE_0__components_Home_vue___default.a, props: true }, { path: '/', component: __WEBPACK_IMPORTED_MODULE_0__components_Home_vue___default.a, props: true }, { path: '/about', component: __WEBPACK_IMPORTED_MODULE_1__components_About_vue___default.a, props: true }, { path: '/services', component: __WEBPACK_IMPORTED_MODULE_2__components_Services_vue___default.a, props: true }, { path: '/process', component: __WEBPACK_IMPORTED_MODULE_3__components_Process_vue___default.a, props: true }, { path: '/contact', component: __WEBPACK_IMPORTED_MODULE_4__components_Contact_vue___default.a, props: true }, { path: '/blog', component: __WEBPACK_IMPORTED_MODULE_5__components_blog_Blog_vue___default.a, props: true }, { path: '*', redirect: '/'
+{ path: '/about', component: __WEBPACK_IMPORTED_MODULE_1__components_About_vue___default.a, props: true }, { path: '/services', component: __WEBPACK_IMPORTED_MODULE_2__components_Services_vue___default.a, props: true }, { path: '/process', component: __WEBPACK_IMPORTED_MODULE_3__components_Process_vue___default.a, props: true }, { path: '/contact', component: __WEBPACK_IMPORTED_MODULE_4__components_Contact_vue___default.a, props: true }, { path: '/blog', component: __WEBPACK_IMPORTED_MODULE_5__components_blog_Blog_vue___default.a, props: true }, { path: '', component: __WEBPACK_IMPORTED_MODULE_0__components_Home_vue___default.a, props: true }, { path: '/', component: __WEBPACK_IMPORTED_MODULE_0__components_Home_vue___default.a, props: true }, { path: '*', redirect: '/'
 	// ==== HYPE ====
 	// { path: '/esc', component: Home, props: true },
 	// { path: '/esc/about', component: About, props: true },
@@ -14857,6 +14857,7 @@ module.exports = function spread(callback) {
 //
 //
 //
+//
 
 /* harmony default export */ exports["default"] = {
     props: ['pageList'],
@@ -17286,14 +17287,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /***/ function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "uk-container uk-container-expand"
-  }, [_c('h1', [_vm._v("The About Page")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
-    domProps: {
-      "innerHTML": _vm._s(_vm.selected.content.rendered)
-    }
-  })])
-},staticRenderFns: []}
+  }, [_c('h1', [_vm._v("The About Page")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', [_vm._v("Testing rendering of About page")])])
+}]}
 
 /***/ },
 /* 60 */
@@ -17397,14 +17396,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /***/ function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "uk-container uk-container-expand"
-  }, [_c('h1', [_vm._v("The Contact Page")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
-    domProps: {
-      "innerHTML": _vm._s(_vm.selected.content.rendered)
-    }
-  })])
-},staticRenderFns: []}
+  }, [_c('h1', [_vm._v("The Contact Page")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', [_vm._v("Testing rendering of Contact page")])])
+}]}
 
 /***/ },
 /* 66 */

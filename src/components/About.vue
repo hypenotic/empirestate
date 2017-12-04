@@ -2,7 +2,8 @@
     <div class="uk-container uk-container-expand">
         <h1>The About Page</h1>
         <hr>
-        <div v-html="selected.content.rendered"></div>
+        <p>Testing rendering of About page</p>
+        <!-- <div v-html="selected.content.rendered"></div> -->
     </div>
 </template>
 
