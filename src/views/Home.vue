@@ -33,7 +33,7 @@
 </template>
 
 <script>
-    import Content from './content.vue';
+    import Content from '../components/content.vue';
     export default {
         components: {
             theContent: Content
@@ -73,6 +73,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import '../sass/variables.scss';
 
 .overlay::before {
     content:"";
@@ -108,11 +109,18 @@ h1 {
 h1,h2,h3,h4,h5,h6 {
     color: white;
     text-align: left;
+    font-family: $heading-type;
+}
+
+.type--bold {
+    font-weight: bold;
 }
 
 h2 {
     margin-top: 10px;
     width: 80%;
+    font-weight: 300;
+    line-height: 120%;
 }
 
 .main-content {

@@ -11,21 +11,8 @@
         <div v-else>
             <transition name="fade">
                 <div class="uk-container uk-container-expand loading-animation">
-                    <!-- SVG sprite -->
-                    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;">
-                        <defs>
-                            <symbol id="loopingPath" viewBox="0 0 147.5 68">
-                                <title>Loading</title>
-                            <path d="M94.65,14a27.5,27.5,0,1,1-.17,39.88L52.93,14.06a27.5,27.5,0,1,0,.12,39.77Z" fill="none" stroke-miterlimit="10"/>
-                            </symbol>
-                        </defs>
-                    </svg>
-
-                    <!-- Display SVG fragment -->
-                    <svg class="loading-spinner">
-                        <use id="background" xlink:href="#loopingPath"/>
-                        <use id="master" xlink:href="#loopingPath"/>
-                    </svg>
+                      <svg width="80" height="60" viewBox="5 0 80 60"><path class="wave" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" d="M 0 37.5 c 7.684299348848887 0 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15" />
+                        </svg>
                 </div>
             </transition>  
         </div>
@@ -115,6 +102,9 @@
 </script>
 
 <style lang="scss">
+// ===== GLOBAL
+@import './sass/variables.scss';
+
 *, :after, :before {
 box-sizing: border-box;
 }
@@ -128,6 +118,7 @@ margin: 0;
 /* background: #34393f; */
 }
 
+// LAYOUT
 .nav-container {
     position: relative;
     z-index: 500;
@@ -137,6 +128,7 @@ margin: 0;
     margin-top: 40px !important;
 }
 
+// TRANSITIONS
 .fade-enter-active, .fade-leave-active {
   transition-property: opacity;
   transition-duration: .25s;
@@ -150,6 +142,7 @@ margin: 0;
   opacity: 0
 }
 
+// LOADING ANIMATION
 .loading-animation {
     // width: 100vw;
     // height: 100vh;
@@ -159,36 +152,20 @@ margin: 0;
     padding-top: 20%; 
 }
 
-$stroke-width: 13;
-$stroke-linecap: round; 
-$looping-color: #e3e3e3;
-$looping-bg: rgba(0,0,0,.25);
-
-$total-duration: 1.5s;
-$total-length: 371.68328857421875;
-$looping-percent: 40;
-
-
-$looping-length: ($looping-percent * $total-length) / 100;
-
-.loading-spinner {
-	[id="master"], [id="background"] {
-		stroke-width: $stroke-width;
-		stroke-linecap: $stroke-linecap;
-	}
-	[id="background"] {
-		stroke: $looping-bg;
-	}
-	[id="master"] {
-		stroke: $looping-color;
-		stroke-dasharray: $looping-length, ($total-length - $looping-length);
-		animation: loading-loop $total-duration linear infinite;
-	}
+.wave {
+  animation: moveTheWave 2400ms linear infinite;
+  stroke-dasharray: 0 16 101 16;
 }
 
-@keyframes loading-loop {
-	from { stroke-dashoffset: 0px; }
-	to   { stroke-dashoffset: #{- $total-length}px; } 
+@keyframes moveTheWave {
+  0% {
+    stroke-dashoffset: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    stroke-dashoffset: -133;
+    transform: translate3d(-90px, 0, 0);
+  }
 }
 
 </style>

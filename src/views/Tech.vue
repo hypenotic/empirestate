@@ -1,8 +1,8 @@
 <template>
     <div class="uk-container uk-container-expand non-home-container">
-        <h1>The About Page</h1>
+        <h1>The Tech Page</h1>
         <hr>
-        <p>Testing rendering of About page</p>
+        <p>Testing rendering of Tech page</p>
         <!-- <div v-html="selected.content.rendered"></div> -->
     </div>
 </template>
@@ -23,7 +23,7 @@
             getPage(pages) {
                 for (let page of pages) {
                     console.log(page.slug);
-                    if (page.slug == 'about') {
+                    if (page.slug == 'tech') {
                         console.log('found it');
                         console.log(page);
                         this.selected = page;
