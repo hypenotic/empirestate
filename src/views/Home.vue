@@ -3,7 +3,7 @@
         <div class="banner banner--home">
             <div class="home-container" :style="{ 'background-image': 'url(' + selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url + ')'}"><div></div></div>
             <div class="overlay"></div>
-            <div class="main-content uk-container uk-container-expand">
+            <div class="main-banner-content uk-container uk-container-large">
                 <h1 v-html="selected.meta_box.es_banner_heading"></h1>
                 <h2 v-html="selected.meta_box.es_banner_subheading"></h2>
                 <a v-html="selected.meta_box.es_banner_cta" class="uk-button uk-button-primary" href=""></a>
@@ -31,31 +31,31 @@
             >
             </vue-particles>
         </div>
-        <div class="uk-container uk-container-expand">
+        <div class="uk-container uk-container-large">
             <div v-html="selected.content.rendered" class="overview overview--home padding--top uk-padding-large"></div>
         </div>
-        <div class="uk-container uk-container-expand home__tech">
+        <div class="uk-container uk-container-large home__tech">
             <h3 v-html="selected.meta_box.es_home_tech_heading"></h3>
             <div class="uk-padding">
                 <div class="block--2-1 home__tech_image">
-                    <img :src="selected.meta_box.es_home_tech_img[0]['full_url']" alt="">
+                    <img :src="selected.meta_box.es_home_tech_img" alt="">
                 </div>
                 <div v-html="selected.meta_box.es_home_tech_over" class="block--2-1 home__tech_overview">
 
                 </div>
             </div>
         </div>
-        <div class="uk-container uk-container-expand home__tech_buckets">
+        <div class="uk-container uk-container-large home__tech_buckets">
             <div class="uk-padding-large">
                 <ul>
-                    <li v-for="bucket in selected.meta_box.es_home_tech_buckets">
+                    <li v-for="bucket in selected.meta_box.es_home_tech_buckets" :key="bucket['es_home_tb_title']">
                         <h4 v-html="bucket['es_home_tb_title']"></h4>
                         <div v-html="bucket['es_home_tb_copy']"></div>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="uk-container uk-container-expand home__quick-facts">
+        <div class="uk-container uk-container-large home__quick-facts">
             <h3 v-html="selected.meta_box.es_home_qf_heading"></h3>
             <div v-html="selected.meta_box.es_home_qf_copy" class="uk-padding-large">
             </div>
@@ -157,17 +157,6 @@
 	}
 }
 
-h1 {
-    /* position: relative; */
-    padding-top: 18%;
-    color: white;
-    font-size: 6vw;
-    line-height: 6vw;
-    @media #{$large-and-up} {
-        padding-top: 160px;
-	}
-}
-
 h1,h2,h3,h4,h5,h6 {
     color: white;
     text-align: left;
@@ -176,13 +165,6 @@ h1,h2,h3,h4,h5,h6 {
 
 .type--bold {
     font-weight: bold;
-}
-
-h2 {
-    margin-top: 10px;
-    width: 80%;
-    font-weight: 300;
-    line-height: 120%;
 }
 
 h3 {
@@ -195,16 +177,6 @@ h4 {
     color: #666;
     text-transform: uppercase;
     font-size: 32px;
-}
-
-.main-content {
-    color: white;
-    position: relative;
-    z-index: 500;
-    display: inline-block;
-    width: 960px;
-    margin: 0 auto;
-    // text-align: center;
 }
 
 #particles-js {
@@ -220,15 +192,6 @@ z-index: 400;
 
 .padding--tb {
     padding: 50px 0; 
-}
-
-.overview,
-.overview p {
-    
-    @media #{$large-and-up} {
-        font-size: 32px;
-        line-height: 40px;
-	}
 }
 
 .home__tech {

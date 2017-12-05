@@ -1,59 +1,59 @@
 <template>
 	<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-	<nav class="uk-navbar light-nav" v-if="$route.path == '/'">
-		<div class="uk-navbar-left">
-			<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/empire_state_logo_green.png" alt="Empire State Connector" class="nav-logo"></router-link>
-			<router-link v-else to="/"><img src="../assets/empire_state_logo_white.png" alt="Empire State Connector" class="nav-logo"></router-link>
-		</div>
-		<div class="uk-navbar-right">
-			<ul class="uk-navbar-nav" v-if="$route.path == '/'">
-				<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
-					<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
-				 		{{ link.title }}
-				 	</router-link>
-					<span></span>
-				</li>
-			</ul>
-			<ul v-else class="uk-navbar-nav">
-				<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
-					<router-link v-if="`${link.object_slug}` == 'home'" to="/" >
-				    {{ link.title }}
-				    </router-link>
-					<router-link v-else :to="`/${link.object_slug}`">
-				 		{{ link.title }}
-				 	</router-link>
-					 <span></span>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<nav v-else class="uk-navbar dark-nav">
-		<div class="uk-navbar-left">
-			<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/empire_state_logo_green.png" alt="Empire State Connector" class="nav-logo"></router-link>
-			<router-link v-else to="/"><img src="../assets/empire_state_logo_white.png" alt="Empire State Connector" class="nav-logo"></router-link>
-		</div>
-		<div class="uk-navbar-right">
-			<ul class="uk-navbar-nav" v-if="$route.path == '/'">
-				<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
-					<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
-				 		{{ link.title }}
-				 	</router-link>
-					<span></span>
-				</li>
-			</ul>
-			<ul v-else class="uk-navbar-nav">
-				<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
-					<router-link v-if="`${link.object_slug}` == 'home'" to="/" >
-				    {{ link.title }}
-				    </router-link>
-					<router-link v-else :to="`/${link.object_slug}`">
-				 		{{ link.title }}
-				 	</router-link>
-					 <span></span>
-				</li>
-			</ul>
-		</div>
-	</nav>
+		<nav class="uk-navbar light-nav" v-if="$route.path == '/'">
+			<div class="uk-navbar-left">
+				<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/empire_state_logo_green.png" alt="Empire State Connector" class="nav-logo"></router-link>
+				<router-link v-else to="/"><img src="../assets/empire_state_logo_white.png" alt="Empire State Connector" class="nav-logo"></router-link>
+			</div>
+			<div class="uk-navbar-right">
+				<ul class="uk-navbar-nav" v-if="$route.path == '/'">
+					<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
+						<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
+							{{ link.title }}
+						</router-link>
+						<span></span>
+					</li>
+				</ul>
+				<ul v-else class="uk-navbar-nav">
+					<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
+						<router-link v-if="`${link.object_slug}` == 'home'" to="/" >
+						{{ link.title }}
+						</router-link>
+						<router-link v-else :to="`/${link.object_slug}`">
+							{{ link.title }}
+						</router-link>
+						<span></span>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<nav v-else class="uk-navbar dark-nav">
+			<div class="uk-navbar-left">
+				<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/empire_state_logo_green.png" alt="Empire State Connector" class="nav-logo"></router-link>
+				<router-link v-else to="/"><img src="../assets/empire_state_logo_white.png" alt="Empire State Connector" class="nav-logo"></router-link>
+			</div>
+			<div class="uk-navbar-right">
+				<ul class="uk-navbar-nav" v-if="$route.path == '/'">
+					<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
+						<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
+							{{ link.title }}
+						</router-link>
+						<span></span>
+					</li>
+				</ul>
+				<ul v-else class="uk-navbar-nav">
+					<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
+						<router-link v-if="`${link.object_slug}` == 'home'" to="/" >
+						{{ link.title }}
+						</router-link>
+						<router-link v-else :to="`/${link.object_slug}`">
+							{{ link.title }}
+						</router-link>
+						<span></span>
+					</li>
+				</ul>
+			</div>
+		</nav>
 	</div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <footer class="uk-padding-large">
+    <footer id="footer-anchor" class="uk-padding-large">
         <div class="uk-container uk-container-expand">
             <p>Footer</p>
         </div>

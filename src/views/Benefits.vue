@@ -1,10 +1,25 @@
 <template>
-    <div class="view view--benefits view--padding-top">
-        <div class="uk-container uk-container-expand non-home-container">
-            <h1>The Benefits Page</h1>
-            <hr>
-            <p>Testing rendering of Benefits page</p>
-            <!-- <div v-html="selected.content.rendered"></div> -->
+    <div class="view view--benefits">
+        <div class="banner banner--benefits">
+            <div class="benefits-container" :style="{ 'background-image': 'url(' + selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url + ')'}"><div></div></div>
+            <div class="overlay"></div>
+            <div class="main-banner-content uk-container uk-container-large">
+                <h1 v-html="selected.meta_box.es_banner_heading"></h1>
+                <h2 v-html="selected.meta_box.es_banner_subheading"></h2>
+            </div>
+        </div>
+        <div class="uk-container uk-container-large">
+            <div v-html="selected.content.rendered" class="overview overview--benefits padding--top uk-padding-large"></div>
+        </div>
+        <div class="uk-container uk-container-large benefits__buckets">
+            <div class="uk-padding-large">
+                <ul>
+                    <li v-for="bucket in selected.meta_box.es_benefit_buckets">
+                        <h4 v-html="bucket['es_bene_tb_title']"></h4>
+                        <div v-html="bucket['es_bene_tb_copy']"></div>
+                    </li>
+                </ul>
+            </div>
         </div>
         <app-footer></app-footer>
     </div>
@@ -44,3 +59,54 @@
         }
     }
 </script>
+
+<style lang="scss" scoped>
+@import '../sass/variables.scss';
+
+.overlay::before {
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 300;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner.banner--benefits {
+    position: relative;
+    min-height: 90vh;
+    @media #{$large-and-up} {
+        min-height: 30vh;
+        height: 550px;
+    }
+    a {
+        color: $white;
+    }
+    .uk-button.uk-button-primary {
+        font-family: $body-type;
+        letter-spacing: 0.7px;
+        // background: orange;
+        // &:hover {
+        //     background: lighten(orange, 5);
+        // }
+    }
+}
+
+.benefits-container{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 200;
+    background-size: cover;
+    background-position: center center;
+    @media #{$large-and-up} {
+        height: 550px;
+	}
+}
+
+</style>
