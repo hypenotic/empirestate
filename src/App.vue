@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-if="loading==false">
-            <div class="uk-container uk-container-expand nav-container">
+            <div class="nav-container">
                 <app-nav v-bind:menu-links="menuLinks" v-bind:menu-color="dark"></app-nav>
             </div>
             <transition name="fade">
@@ -118,10 +118,24 @@ margin: 0;
 /* background: #34393f; */
 }
 
+
 // LAYOUT
-.nav-container {
+
+.view {
     position: relative;
+    z-index: 400;
+}
+
+.view--padding-top {
+    padding-top: 100px;
+}
+.nav-container {
     z-index: 500;
+    @media #{$large-and-up} {
+        position: absolute;
+        width: 95%;
+        margin: 0 2.5%;
+    }
 }
 
 .non-home-container {

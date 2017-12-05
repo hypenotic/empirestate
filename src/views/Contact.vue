@@ -1,14 +1,22 @@
 <template>
-    <div class="uk-container uk-container-expand non-home-container">
-        <h1>The Contact Page</h1>
-        <hr>
-        <!-- <div v-html="selected.content.rendered"></div> -->
-        <p>Testing rendering of Contact page</p>
+    <div class="view view--contact view--padding-top">
+        <div class="uk-container uk-container-expand non-home-container">
+            <h1>The Contact Page</h1>
+            <hr>
+            <!-- <div v-html="selected.content.rendered"></div> -->
+            <p>Testing rendering of Contact page</p>
+        </div>
+        <app-footer></app-footer>
     </div>
 </template>
 
 <script>
+    import Footer from '../components/Footer.vue';
     export default {
+        components: {
+            // theContent: Content,
+            appFooter: Footer,
+        },
         data: function () {
             return {
                 selected: []

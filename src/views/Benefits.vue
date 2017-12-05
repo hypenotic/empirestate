@@ -1,14 +1,22 @@
 <template>
-    <div class="uk-container uk-container-expand non-home-container">
-        <h1>The Benefits Page</h1>
-        <hr>
-        <p>Testing rendering of Benefits page</p>
-        <!-- <div v-html="selected.content.rendered"></div> -->
+    <div class="view view--benefits view--padding-top">
+        <div class="uk-container uk-container-expand non-home-container">
+            <h1>The Benefits Page</h1>
+            <hr>
+            <p>Testing rendering of Benefits page</p>
+            <!-- <div v-html="selected.content.rendered"></div> -->
+        </div>
+        <app-footer></app-footer>
     </div>
 </template>
 
 <script>
+    import Footer from '../components/Footer.vue';
     export default {
+        components: {
+            // theContent: Content,
+            appFooter: Footer,
+        },
         props: ['pageList', 'loadCheck'],
         data: function () {
             return {
