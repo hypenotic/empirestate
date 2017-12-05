@@ -129,9 +129,12 @@ margin: 0;
     position: relative;
     z-index: 500;
     display: inline-block;
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
     // text-align: center;
+    @media #{$large-and-up} {
+        width: 960px;
+    }
     @media #{$xlarge-and-up} {
         display: block;
         width: 960px;
@@ -142,10 +145,12 @@ margin: 0;
     }
     h1 {
         /* position: relative; */
-        padding-top: 18%;
-        font-size: 6vw;
-        line-height: 6vw;
+        font-size: 12vw;
+        line-height: 12vw;
+        padding-top: 24%;
         @media #{$large-and-up} {
+            font-size: 6vw;
+            line-height: 6vw;
             padding-top: 160px;
         }
         @media #{$xlarge-and-up} {
@@ -158,6 +163,11 @@ margin: 0;
         width: 80%;
         font-weight: 300;
         line-height: 120%;
+        @media #{$small-and-down} {
+            width: 95%;
+            font-size: 6vw;
+            line-height: 7vw;
+        }
     }
 }
 
@@ -182,6 +192,9 @@ margin: 0;
 
 .nav-container {
     z-index: 500;
+     position: absolute;
+        width: 95%;
+        margin: 0 2.5%;
     @media #{$large-and-up} {
         position: absolute;
         width: 95%;
