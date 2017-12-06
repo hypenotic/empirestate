@@ -13,6 +13,12 @@
 							<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
+							<router-link v-else-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
+								{{ link.title }}
+							</router-link>
+							<router-link v-else :to="`/${link.object_slug}`">
+								{{ link.title }}
+							</router-link>
 							<span></span>
 						</li>
 					</ul>
@@ -41,6 +47,12 @@
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
 						<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
 							<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
+								{{ link.title }}
+							</router-link>
+							<router-link v-else-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
+								{{ link.title }}
+							</router-link>
+							<router-link v-else :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
 							<span></span>
@@ -159,6 +171,14 @@
 		},
 		destroyed: function () {
 			window.removeEventListener('scroll', this.handleScroll);
+		},
+		computed: {
+			contactCheck: function (slug) {
+				// this.menuLinks
+				if (slug !== 'home' || slug == 'contact') {
+					return true;
+				}
+			}
 		}
     }
 </script>
