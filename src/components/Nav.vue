@@ -9,7 +9,7 @@
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
-						<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
 							<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
@@ -21,9 +21,16 @@
 							</router-link>
 							<span></span>
 						</li>
+						<li v-else :key="`menu-item-${link.object_slug}`">
+							<a :href="link.url" target="_blank" class="external-link">
+								{{ link.title }}
+							</a>
+							<span></span>
+						</li>
+
 					</ul>
 					<ul v-else class="uk-navbar-nav">
-						<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
 							<router-link v-if="`${link.object_slug}` == 'home'" to="/" >
 							{{ link.title }}
 							</router-link>
@@ -33,6 +40,12 @@
 							<router-link v-else :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
+							<span></span>
+						</li>
+						<li v-else :key="`menu-item-${link.object_slug}`">
+							<a :href="link.url" target="_blank" class="external-link">
+								{{ link.title }}
+							</a>
 							<span></span>
 						</li>
 					</ul>
@@ -45,7 +58,7 @@
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
-						<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
 							<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
@@ -57,9 +70,15 @@
 							</router-link>
 							<span></span>
 						</li>
+						<li v-else :key="`menu-item-${link.object_slug}`">
+							<a :href="link.url" target="_blank" class="external-link">
+								{{ link.title }}
+							</a>
+							<span></span>
+						</li>
 					</ul>
 					<ul v-else class="uk-navbar-nav">
-						<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
 							<router-link v-if="`${link.object_slug}` == 'home'" to="/" >
 							{{ link.title }}
 							</router-link>
@@ -69,6 +88,12 @@
 							<router-link v-else :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
+							<span></span>
+						</li>
+						<li v-else :key="`menu-item-${link.object_slug}`">
+							<a :href="link.url" target="_blank" class="external-link">
+								{{ link.title }}
+							</a>
 							<span></span>
 						</li>
 					</ul>
@@ -87,15 +112,21 @@
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
-						<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
 							<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
 							<span></span>
 						</li>
+						<li v-else :key="`menu-item-${link.object_slug}`">
+							<a :href="link.url" target="_blank" class="external-link">
+								{{ link.title }}
+							</a>
+							<span></span>
+						</li>
 					</ul>
 					<ul v-else class="uk-navbar-nav">
-						<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
 							<router-link v-if="`${link.object_slug}` == 'home'" to="/" >
 							{{ link.title }}
 							</router-link>
@@ -105,6 +136,12 @@
 							<router-link v-else :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
+							<span></span>
+						</li>
+						<li v-else :key="`menu-item-${link.object_slug}`">
+							<a :href="link.url" target="_blank" class="external-link">
+								{{ link.title }}
+							</a>
 							<span></span>
 						</li>
 					</ul>
@@ -117,15 +154,21 @@
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
-						<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
 							<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
 							<span></span>
 						</li>
+						<li v-else :key="`menu-item-${link.object_slug}`">
+							<a :href="link.url" target="_blank" class="external-link">
+								{{ link.title }}
+							</a>
+							<span></span>
+						</li>
 					</ul>
 					<ul v-else class="uk-navbar-nav">
-						<li v-for="link in menuLinks" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
 							<router-link v-if="`${link.object_slug}` == 'home'" to="/" >
 							{{ link.title }}
 							</router-link>
@@ -135,6 +178,12 @@
 							<router-link v-else :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
+							<span></span>
+						</li>
+						<li v-else :key="`menu-item-${link.object_slug}`">
+							<a :href="link.url" target="_blank" class="external-link">
+								{{ link.title }}
+							</a>
 							<span></span>
 						</li>
 					</ul>
@@ -197,7 +246,7 @@ nav {
 
 .nav-background#scrolling {
 	background: $white;
-	background: $green;
+	background: $main-accent;
 	// display: fixed;
 	width: 100%;
 	height: 80px;
@@ -241,13 +290,26 @@ nav {
 	}
 }
 
+a.external-link {
+	// color: red !important;
+	border: 1px solid rgba(255,255,255,0.3);
+	height: 50%;
+	// vertical-align: middle;
+	margin-top: 15.5%;
+	&:hover {
+		border: 1px solid $main-accent;
+		background: $main-accent;
+		color: $white;
+	}
+}
+
 .uk-navbar-right {
 	li {
 		text-decoration: none;
 		position: relative;
 		text-align: center;
 		&:hover {
-			span {
+			a:not(.external-link) + span {
 				visibility: visible;
 				-webkit-transform: scaleX(1);
 				transform: scaleX(1);

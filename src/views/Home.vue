@@ -6,7 +6,7 @@
             <div class="main-banner-content uk-container uk-container-large">
                 <h1 v-html="selected.meta_box.es_banner_heading"></h1>
                 <h2 v-html="selected.meta_box.es_banner_subheading"></h2>
-                <a v-html="selected.meta_box.es_banner_cta" class="uk-button uk-button-primary" href=""></a>
+                <a v-html="selected.meta_box.es_banner_cta" class="uk-button uk-button-primary" :href="selected.meta_box.es_banner_link" target="_blank"></a>
                 <!-- <the-content :body-copy="selected"></the-content> -->
                 <!-- <div v-html="selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url"></div> -->
                 <!-- <img src="http://placehold.it/200x300"> -->
@@ -142,10 +142,10 @@
     .uk-button.uk-button-primary {
         font-family: $heading-type;
         letter-spacing: 0.7px;
-        background: $green;
+        background: $main-accent;
         margin-top: 8px;
         &:hover {
-            background: lighten($green, 5);
+            background: lighten($main-accent, 5);
         }
     }
 }
@@ -182,7 +182,7 @@ h3 {
 
 h4 {
     // color: #666;
-    color: $green;
+    color: $main-accent;
     text-transform: uppercase;
     font-size: 32px;
 }
@@ -200,6 +200,11 @@ z-index: 400;
 
 .padding--tb {
     padding: 50px 0; 
+}
+
+.overview--home {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .home__tech {

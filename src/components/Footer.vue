@@ -65,7 +65,7 @@
 @import '../sass/variables.scss';
 
 footer {
-    background: darken($green, 30) !important;
+    background: darken($main-accent, 30) !important;
     color: $white;
 }
 

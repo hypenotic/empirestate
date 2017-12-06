@@ -136,17 +136,17 @@ h2 {
 }
 
 a {
-    color: $green;
+    color: $main-accent;
     font-size: 0.6rem !important;
     // line-height: 0.8rem !important;
     &:hover {
-        color: lighten($green, 5);
+        color: lighten($main-accent, 5);
     }
 }
 
 .contentItalic,
 em {
-    color: $green;
+    color: $main-accent;
 }
 
 body {
@@ -164,8 +164,8 @@ margin: 0;
     margin: 0 auto;
     // text-align: center;
     @media #{$large-and-up} {
-        max-width: 1100px;
-        width: 1100px;
+        max-width: 1000px;
+        width: 1000px;
         padding-left: 100px; 
         // display: block;
         // width: 1200px;
@@ -270,7 +270,7 @@ margin: 0;
     // height: 100vh;
     // position: absolute;
     // background: white;
-    background: $green;
+    background: $main-accent;
     text-align: center;
     padding-top: 45vh; 
     min-height: 60vh;
