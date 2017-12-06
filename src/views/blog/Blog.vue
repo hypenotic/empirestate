@@ -116,10 +116,10 @@
 @import '../../sass/variables.scss';
 
 .single-post {
-    background: $green;
+    background: $main-accent;
     position:relative;
     &:hover {
-        background: darken($green,10);
+        background: darken($main-accent,10);
     }
     h3 {
         margin-bottom: 0;
@@ -148,9 +148,9 @@
 }
 
 .single-post:nth-child(even) {
-    background: darken($green, 5);
+    background: darken($main-accent, 5);
     &:hover {
-        background: darken($green,10);
+        background: darken($main-accent,10);
     }
 }
 

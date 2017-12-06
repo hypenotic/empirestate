@@ -108,7 +108,7 @@
 			<nav class="uk-navbar dark-nav" v-if="$route.path == '/news'">
 				<div class="uk-navbar-left">
 					<router-link v-if="$route.path !== '/news'" to="/"><img src="../assets/empire_state_logo_white.png" alt="Empire State Connector" class="nav-logo"></router-link>
-					<router-link v-else to="/"><img src="../assets/empire_state_logo_green.png" alt="Empire State Connector" class="nav-logo"></router-link>
+					<router-link v-else to="/"><img src="../assets/empire_state_logo_black.png" alt="Empire State Connector" class="nav-logo"></router-link>
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
@@ -281,6 +281,33 @@ nav {
 	}
 }
 
+a.external-link {
+	// color: red !important;
+	border: 1px solid rgba(255,255,255,0.3);
+	height: 50%;
+	// vertical-align: middle;
+	margin-top: 15.5%;
+	
+	transition: all 0.2s ease;
+	position: absolute;
+	right: -1000px;
+	&:hover {
+		border: 1px solid $main-accent;
+		background: $main-accent;
+		color: $white;
+	}
+}
+
+#scrolling a.external-link {
+	position: relative;
+	right: auto;
+	&:hover {
+		border: 1px solid $main-accent;
+		background: $white;
+		color: $main-accent !important;
+	}
+}
+
 .uk-navbar.light-nav {
 	a {
 		color: $white;
@@ -290,18 +317,6 @@ nav {
 	}
 }
 
-a.external-link {
-	// color: red !important;
-	border: 1px solid rgba(255,255,255,0.3);
-	height: 50%;
-	// vertical-align: middle;
-	margin-top: 15.5%;
-	&:hover {
-		border: 1px solid $main-accent;
-		background: $main-accent;
-		color: $white;
-	}
-}
 
 .uk-navbar-right {
 	li {
@@ -347,6 +362,10 @@ a.external-link {
 		li span {
 			background-color: rgba(0,0,0,0.3);
 		}
+	}
+	a.external-link {
+		// color: red !important;
+		border: 1px solid rgba(0,0,0,0.2);
 	}
 }
 
