@@ -72,7 +72,7 @@
     left: 0;
     width: 100%;
     z-index: 300;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .banner.banner--benefits {
@@ -107,6 +107,11 @@
     @media #{$large-and-up} {
         height: 500px;
 	}
+}
+
+.overview--benefits {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 </style>

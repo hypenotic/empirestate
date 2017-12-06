@@ -150,7 +150,7 @@
         padding: 16px 0;
     }
     button.uk-active {
-        background: $green;
+        background: $main-accent;
         color: $white;
     }
 }

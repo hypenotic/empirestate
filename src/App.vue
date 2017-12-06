@@ -146,7 +146,7 @@ a {
 
 .contentItalic,
 em {
-    color: $main-accent;
+    color: $white;
 }
 
 body {

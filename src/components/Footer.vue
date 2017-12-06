@@ -8,12 +8,12 @@
                 </div>
                 <div class="progress">
                     <h5>Progress</h5>
-                    <div class="progress__done">
-                        <h6 v-html="footer.meta_box.es_prog_done_heading"></h6>
-                        <div v-html="footer.meta_box.es_prog_done_list"></div>
-                    </div>
                     <div class="progress__doing">
                         <h6 v-html="footer.meta_box.es_prog_doing_heading"></h6>
+                        <div v-html="footer.meta_box.es_prog_doing_list"></div>
+                    </div>
+                    <div class="progress__done">
+                        <h6 v-html="footer.meta_box.es_prog_done_heading"></h6>
                         <div v-html="footer.meta_box.es_prog_done_list"></div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ footer {
     color: $white;
     padding: 50px 0;
     a {
-        font-size: 1rem !important;
+        // font-size: 1rem !important;
     }
     h1,h2,h3,h4,h5,h6 {
         color: $white;
@@ -91,6 +91,10 @@ footer {
     h6 {
         font-size: 1.1rem;
     }
+    p,a {
+        font-size: 0.8rem !important;
+        line-height: 1.2rem !important;
+    }
 }
 
 .progress {
@@ -99,7 +103,7 @@ footer {
          li {
             position: relative;
             font-size: 0.8rem;
-            line-height: 1.1rem;
+            line-height: 1.2rem;
             margin-bottom: 10px;
             padding-left: 10px;
         }

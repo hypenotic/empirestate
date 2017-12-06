@@ -1,4 +1,5 @@
 <template>
+<!-- Why don't I just do a check for home... -->
 <div v-if="scrolled == true" id="scrolling" class="nav-background">
 	<div class="nav-container">
 		<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
@@ -22,7 +23,7 @@
 							<span></span>
 						</li>
 						<li v-else :key="`menu-item-${link.object_slug}`">
-							<a :href="link.url" target="_blank" class="external-link">
+							<a :href="link.url" target="_blank" class="external-link external-link--hide">
 								{{ link.title }}
 							</a>
 							<span></span>
@@ -71,7 +72,7 @@
 							<span></span>
 						</li>
 						<li v-else :key="`menu-item-${link.object_slug}`">
-							<a :href="link.url" target="_blank" class="external-link">
+							<a :href="link.url" target="_blank" class="external-link external-link--hide">
 								{{ link.title }}
 							</a>
 							<span></span>
@@ -119,7 +120,7 @@
 							<span></span>
 						</li>
 						<li v-else :key="`menu-item-${link.object_slug}`">
-							<a :href="link.url" target="_blank" class="external-link">
+							<a :href="link.url" target="_blank" class="external-link external-link--hide">
 								{{ link.title }}
 							</a>
 							<span></span>
@@ -161,7 +162,7 @@
 							<span></span>
 						</li>
 						<li v-else :key="`menu-item-${link.object_slug}`">
-							<a :href="link.url" target="_blank" class="external-link">
+							<a :href="link.url" target="_blank" class="external-link external-link--hide">
 								{{ link.title }}
 							</a>
 							<span></span>
@@ -287,15 +288,17 @@ a.external-link {
 	height: 50%;
 	// vertical-align: middle;
 	margin-top: 15.5%;
-	
-	transition: all 0.2s ease;
-	position: absolute;
-	right: -1000px;
 	&:hover {
 		border: 1px solid $main-accent;
 		background: $main-accent;
 		color: $white;
 	}
+}
+
+.external-link.external-link--hide {
+	transition: all 0.2s ease;
+	position: absolute;
+	right: -1000px;
 }
 
 #scrolling a.external-link {
