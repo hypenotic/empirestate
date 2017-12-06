@@ -80,7 +80,7 @@
     min-height: 90vh;
     @media #{$large-and-up} {
         min-height: 30vh;
-        height: 550px;
+        height: 500px;
     }
     a {
         color: $white;
@@ -105,7 +105,7 @@
     background-size: cover;
     background-position: top center;
     @media #{$large-and-up} {
-        height: 550px;
+        height: 500px;
 	}
 }
 

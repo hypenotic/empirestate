@@ -158,7 +158,7 @@
 		},
         methods: {
 			handleScroll: function (event) {
-				console.log(window.scrollY);
+				// console.log(window.scrollY);
 				if (window.scrollY > 20) {
 					this.scrolled = true;
 				} else {

@@ -99,7 +99,7 @@
         methods: {
             getPage(pages) {
                 for (let page of pages) {
-                    console.log(page.slug);
+                    // console.log(page.slug);
                     if (page.slug == 'home') {
                         console.log('found it');
                         // console.log(page);

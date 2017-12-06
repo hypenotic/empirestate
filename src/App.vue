@@ -83,7 +83,7 @@
                 for (let page of response.data) {
                     console.log(page.slug);
                     if (page.slug == 'home') {
-                        console.log('found it');
+                        // console.log('found it');
                         app.homePage = page;
                         break;
                     }
@@ -184,6 +184,7 @@ margin: 0;
         font-size: 12vw;
         line-height: 12vw;
         padding-top: 24%;
+        text-transform: uppercase;
         @media #{$large-and-up} {
             font-size: 6vw;
             line-height: 6vw;
@@ -198,7 +199,7 @@ margin: 0;
         margin-top: 10px;
         width: 80%;
         font-weight: 300;
-        line-height: 120%;
+        line-height: 130%;
         font-family: $body-type;
         font-weight: 200;
         @media #{$small-and-down} {
@@ -278,6 +279,7 @@ margin: 0;
 .loading-animation.loading-animation--page {
     min-height: 70vh;
     padding-top: 10%; 
+    background: $white;
 }
 
 .wave {
