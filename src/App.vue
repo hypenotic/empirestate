@@ -1,9 +1,9 @@
 <template>
     <div>
         <div v-if="loading==false">
-            <div class="nav-container">
+            
                 <app-nav v-bind:menu-links="menuLinks" v-bind:menu-color="dark"></app-nav>
-            </div>
+            
             <transition name="fade">
                 <router-view :page-list="pages" :load-check="loading"></router-view>
             </transition> 
@@ -21,7 +21,6 @@
 
 <script>
     import axios from 'axios';
-    import VueAxios from 'vue-axios';
 	import Nav from './components/Nav.vue';
     export default {
         components: {
@@ -106,16 +105,41 @@
 @import './sass/variables.scss';
 
 *, :after, :before {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html, body {
-height: 100%;
-font-family: $body-type;
+    height: 100%;
+    // font-family: serif;
+    font-family: $body-type;
+    font-size: 18px;
+    // line-height: 1.5rem;
+    @media #{$large-and-up} {
+        font-size: 24px;
+        line-height: 1.5rem;
+    }
 }
 
 h1,h2,h3,h4,h5,h6 {
     font-family: $heading-type;
+}
+
+h1 {
+
+}
+
+h2 {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
+
+a {
+    color: $green;
+    font-size: 0.6rem !important;
+    // line-height: 0.8rem !important;
+    &:hover {
+        color: lighten($green, 5);
+    }
 }
 
 body {
@@ -192,13 +216,13 @@ margin: 0;
 
 .nav-container {
     z-index: 500;
-     position: absolute;
-        width: 95%;
-        margin: 0 2.5%;
+    position: fixed;
+    width: 95%;
+    margin: 0 2.5%;
     @media #{$large-and-up} {
         position: absolute;
-        width: 95%;
-        margin: 0 2.5%;
+        width: 92%;
+        margin: 0 4%;
     }
     @media #{$xlarge-and-up} {
         // position: absolute;
@@ -232,7 +256,12 @@ margin: 0;
     // position: absolute;
     background: white;
     text-align: center;
-    padding-top: 20%; 
+    padding-top: 45vh; 
+}
+
+.loading-animation.loading-animation--page {
+    min-height: 70vh;
+    padding-top: 10%; 
 }
 
 .wave {

@@ -14,7 +14,7 @@
         <div class="uk-container uk-container-large tech__cable">
             <h3 v-html="selected.meta_box.es_cable_heading"></h3>
             <div class="uk-padding">
-                <div v-html="selected.meta_box.es_cable_copy" class="block--2-1 tech__cable-overview">
+                <div v-html="selected.meta_box.es_cable_copy" class="block--2-1 tech__cable_overview">
                 </div>
                 <div class="block--2-1 tech__cable_image">
                     <img :src="selected.meta_box.es_cable_img" alt="">
@@ -23,7 +23,7 @@
         </div>
         <div class="uk-container uk-container-large tech__process uk-padding-large">
             <h3>Cable Installation</h3>
-            <div uk-switcher="animation: uk-animation-fade">
+            <div uk-switcher="animation: uk-animation-fade" class="tech_tabs">
                 <button class="uk-button uk-button-default" type="button" v-html="selected.meta_box.es_tech_uw_heading"></button>
                 <button class="uk-button uk-button-default" type="button" v-html="selected.meta_box.es_tech_land_heading"></button>
             </div>
@@ -129,13 +129,29 @@
         @media #{$large-and-up} {
             display: flex;
             justify-content: space-between;
-            div.home__tech_image {
-                width: 35%; 
+            div.tech__cable_image {
+                width: 50%; 
             }
-            div.home__tech_overview {
-                width: 62%; 
+            div.tech__cable_overview {
+                width: 50%; 
             }
         }
+    }
+}
+
+.tech_tabs {
+    display: flex;
+    button {
+        display: block;
+        width: 50%;
+        border: none;
+        border-radius: 0;
+        background: lighten(#e3e3e3, 5);
+        padding: 16px 0;
+    }
+    button.uk-active {
+        background: $green;
+        color: $white;
     }
 }
 

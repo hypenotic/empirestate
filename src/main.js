@@ -11,7 +11,17 @@ Vue.use(VueRouter, VueAxios, axios);
 
 const router = new VueRouter({
 	routes,
-	mode: 'history'
+	mode: 'history',
+	scrollBehavior (to, from, savedPosition) {
+		if (to.hash) {
+			return {
+			  selector: to.hash
+			  // , offset: { x: 0, y: 10 }
+			}
+		} else {
+			return { x: 0, y: 0 }
+		}
+	}
 });
 
 import App from './App.vue';

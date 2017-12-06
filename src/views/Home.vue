@@ -34,9 +34,9 @@
         <div class="uk-container uk-container-large">
             <div v-html="selected.content.rendered" class="overview overview--home padding--top uk-padding-large"></div>
         </div>
-        <div class="uk-container uk-container-large home__tech">
+        <div class="home__tech">
             <h3 v-html="selected.meta_box.es_home_tech_heading"></h3>
-            <div class="uk-padding">
+            <div>
                 <div class="block--2-1 home__tech_image">
                     <img :src="selected.meta_box.es_home_tech_img" alt="">
                 </div>
@@ -45,8 +45,8 @@
                 </div>
             </div>
         </div>
-        <div class="uk-container uk-container-large home__tech_buckets">
-            <div class="uk-padding-large">
+        <div class="uk-container uk-padding-large uk-container-large home__tech_buckets">
+            <div>
                 <ul>
                     <li v-for="bucket in selected.meta_box.es_home_tech_buckets" :key="bucket['es_home_tb_title']">
                         <h4 v-html="bucket['es_home_tb_title']"></h4>
@@ -55,9 +55,9 @@
                 </ul>
             </div>
         </div>
-        <div class="uk-container uk-container-large home__quick-facts">
+        <div class="uk-container uk-padding-large uk-container-large home__quick-facts">
             <h3 v-html="selected.meta_box.es_home_qf_heading"></h3>
-            <div v-html="selected.meta_box.es_home_qf_copy" class="uk-padding-large">
+            <div v-html="selected.meta_box.es_home_qf_copy">
             </div>
         </div>
 
@@ -136,10 +136,10 @@
     .uk-button.uk-button-primary {
         font-family: $body-type;
         letter-spacing: 0.7px;
-        // background: orange;
-        // &:hover {
-        //     background: lighten(orange, 5);
-        // }
+        background: $green;
+        &:hover {
+            background: lighten($green, 5);
+        }
     }
 }
 
@@ -174,7 +174,8 @@ h3 {
 }
 
 h4 {
-    color: #666;
+    // color: #666;
+    color: $green;
     text-transform: uppercase;
     font-size: 32px;
 }
@@ -195,6 +196,8 @@ z-index: 400;
 }
 
 .home__tech {
+    max-width: 1300px;
+    margin: 0 auto;
     h3 {
         text-align: center;
     }
@@ -207,6 +210,7 @@ z-index: 400;
             }
             div.home__tech_overview {
                 width: 62%; 
+                padding-right: 42px;
             }
         }
     }
@@ -223,6 +227,10 @@ z-index: 400;
             justify-content: space-between;
             li {
                 width: 45%;
+            }
+            li:first-child,
+            li:nth-child(2) {
+                margin-bottom: 42px;
             }
         }
     }

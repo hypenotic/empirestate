@@ -29,7 +29,7 @@
 @import '../sass/variables.scss';
 
 footer {
-    background: #003b4c !important;
+    background: darken($green, 30) !important;
     color: $white;
 }
 </style>
