@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-23.000000, -16.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="check-mark" transform="translate(23.000000, 16.000000)">
+                <path d="M9.50647176,25.0004888 C8.72932348,25.0004888 7.99431835,24.6369148 7.52181505,24.013339 L1.14034192,15.5857802 C0.310336126,14.4897011 0.526409063,12.9289759 1.62248814,12.098613 C2.72035295,11.2678929 4.2800067,11.4853944 5.11036964,12.5807592 L9.3075418,18.1229407 L19.8636869,1.17353668 C20.5904777,0.00745710532 22.1251313,-0.3493311 23.2937109,0.376388253 C24.4608619,1.1028219 24.817293,2.6385469 24.090145,3.80569791 L11.6200579,23.8272663 C11.1868406,24.5233426 10.4389783,24.9612028 9.62004399,24.9983459 C9.58182943,24.9997745 9.54432917,25.0004888 9.50647176,25.0004888 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
