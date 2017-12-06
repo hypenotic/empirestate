@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="uk-container uk-container-large">
-            <div v-html="selected.content.rendered" class="overview overview--benefits padding--top uk-padding-large"></div>
+            <div v-html="selected.content.rendered" class="overview overview--benefits padding--top uk-padding"></div>
         </div>
         <div class="uk-container uk-container-large tech__cable">
             <h3 v-html="selected.meta_box.es_cable_heading"></h3>
@@ -92,7 +92,7 @@
     min-height: 90vh;
     @media #{$large-and-up} {
         min-height: 30vh;
-        height: 550px;
+        height: 500px;
     }
     a {
         color: $white;
@@ -115,9 +115,9 @@
     left:0;
     z-index: 200;
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
     @media #{$large-and-up} {
-        height: 550px;
+        height: 500px;
 	}
 }
 
@@ -148,6 +148,8 @@
         border-radius: 0;
         background: lighten(#e3e3e3, 5);
         padding: 16px 0;
+        font-family: $heading-type;
+        font-weight: 400;
     }
     button.uk-active {
         background: $main-accent;

@@ -214,6 +214,9 @@ z-index: 400;
         text-align: center;
     }
     >div {
+        div.home__tech_overview {
+            padding: 30px;
+        }
         @media #{$large-and-up} {
             margin-top: 40px;
             display: flex;
@@ -235,6 +238,11 @@ z-index: 400;
         margin: 0;
         padding: 0;
         list-style-type: none;
+        @media #{$small-and-down} {
+            li {
+                margin-bottom: 32px;
+            }
+        }
         @media #{$large-and-up} {
             display: flex;
             flex-wrap: wrap;

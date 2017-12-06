@@ -156,6 +156,9 @@ footer {
 .footer-outer-container {
     max-width: 1150px;
     margin: 0 auto;
+    @media #{$small-and-down} {
+        padding: 0 30px;
+    }
 }
 
 .footer-container {
