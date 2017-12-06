@@ -55,10 +55,16 @@
                 </ul>
             </div>
         </div>
-        <div class="uk-container uk-padding-large uk-container-large home__quick-facts">
+        <div class="home__quick-facts">
             <h3 v-html="selected.meta_box.es_home_qf_heading"></h3>
-            <div v-html="selected.meta_box.es_home_qf_copy">
-            </div>
+            <ul>
+                <li v-for="fact in selected.meta_box.es_fact_list" :key="fact['es_fact_item_title']">   
+                    <div>
+                        <h4 v-html="fact['es_fact_item_title']"></h4>
+                        <div v-html="fact['es_fact_item_copy']"></div>
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <app-footer></app-footer>
@@ -134,9 +140,10 @@
         color: $white;
     }
     .uk-button.uk-button-primary {
-        font-family: $body-type;
+        font-family: $heading-type;
         letter-spacing: 0.7px;
         background: $green;
+        margin-top: 8px;
         &:hover {
             background: lighten($green, 5);
         }
@@ -203,14 +210,16 @@ z-index: 400;
     }
     >div {
         @media #{$large-and-up} {
+            margin-top: 40px;
             display: flex;
             justify-content: space-between;
             div.home__tech_image {
-                width: 35%; 
+                width: 50%; 
             }
             div.home__tech_overview {
-                width: 62%; 
-                padding-right: 42px;
+                width: 50%; 
+                // padding-right: 42px;
+                padding: 0 50px;
             }
         }
     }
@@ -239,6 +248,28 @@ z-index: 400;
 .home__quick-facts {
     h3 {
         text-align: center;
+    }
+    ul {
+        max-width: 1300px;
+        margin: 0 auto;
+        list-style-type: none;
+        @media #{$large-and-up} {
+            margin-bottom: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li {
+                width: 25%;
+                >div {
+                    padding: 16px;
+                }
+                >div >div {
+                    font-size: 0.9em;
+                    line-height: 1.5em;
+                }
+            }
+        }
+
     }
 }
 

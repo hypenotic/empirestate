@@ -16,7 +16,7 @@
                             <div class="card" v-if="post.meta_box.es_post_link !== ''">
                                 <h3>
                                     <a :href="post.meta_box.es_post_link" target="_blank">
-                                        <span class="post-type">Media Feature</span>
+                                        <span class="post-type" v-html="post.pure_taxonomies.categories[0]['cat_name']"></span>
                                         <span v-html="post.meta_box.es_post_heading"></span>
                                     </a>
                                 </h3>	
@@ -24,7 +24,7 @@
                             <div class="card" v-else-if="post.meta_box.es_post_file !== ''">
                                 <h3>
                                     <a :href="post.meta_box.es_post_file" target="_blank">
-                                        <span class="post-type">Press Release</span>
+                                         <span class="post-type" v-html="post.pure_taxonomies.categories[0]['cat_name']"></span>
                                         <span v-html="post.meta_box.es_post_heading"></span>
                                     </a>
                                 </h3>	
@@ -104,8 +104,7 @@
                     .catch(function (error) {
                     console.log(error)
                     })
-                }
-                
+                } 
             }
         },
         computed: {
@@ -167,6 +166,11 @@
             >div {
                 
             }
+        }
+    }
+    @media #{$xlarge-and-up} {
+        .single-post {
+            width: 25%;
         }
     }
 }

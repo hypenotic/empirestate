@@ -14,7 +14,7 @@
         <div class="uk-container uk-container-large benefits__buckets">
             <div class="uk-padding-large">
                 <ul>
-                    <li v-for="bucket in selected.meta_box.es_benefit_buckets">
+                    <li v-for="bucket in selected.meta_box.es_benefit_buckets" :key="bucket['es_bene_tb_title']">
                         <h4 v-html="bucket['es_bene_tb_title']"></h4>
                         <div v-html="bucket['es_bene_tb_copy']"></div>
                     </li>
@@ -96,14 +96,14 @@
 }
 
 .benefits-container{
-    width: 100vw;
+    width: 100%;
     height: 90vh;
     position: absolute;
     top: 0;
     left:0;
     z-index: 200;
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
     @media #{$large-and-up} {
         height: 550px;
 	}

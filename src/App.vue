@@ -11,7 +11,7 @@
         <div v-else>
             <transition name="fade">
                 <div class="uk-container uk-container-expand loading-animation">
-                      <svg width="80" height="60" viewBox="5 0 80 60"><path class="wave" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" d="M 0 37.5 c 7.684299348848887 0 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15" />
+                      <svg width="80" height="60" viewBox="5 0 80 60"><path class="wave" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" d="M 0 37.5 c 7.684299348848887 0 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15" />
                         </svg>
                 </div>
             </transition>  
@@ -113,6 +113,7 @@ html, body {
     // font-family: serif;
     font-family: $body-type;
     font-size: 18px;
+    font-weight: 300;
     // line-height: 1.5rem;
     @media #{$large-and-up} {
         font-size: 24px;
@@ -122,6 +123,7 @@ html, body {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: $heading-type;
+    color: #666;
 }
 
 h1 {
@@ -142,6 +144,11 @@ a {
     }
 }
 
+.contentItalic,
+em {
+    color: $green;
+}
+
 body {
 margin: 0;
 /* background: #34393f; */
@@ -157,7 +164,12 @@ margin: 0;
     margin: 0 auto;
     // text-align: center;
     @media #{$large-and-up} {
-        width: 960px;
+        max-width: 1100px;
+        width: 1100px;
+        padding-left: 100px; 
+        // display: block;
+        // width: 1200px;
+        // margin: 0 auto;
     }
     @media #{$xlarge-and-up} {
         display: block;
@@ -187,6 +199,8 @@ margin: 0;
         width: 80%;
         font-weight: 300;
         line-height: 120%;
+        font-family: $body-type;
+        font-weight: 200;
         @media #{$small-and-down} {
             width: 95%;
             font-size: 6vw;
@@ -254,9 +268,11 @@ margin: 0;
     // width: 100vw;
     // height: 100vh;
     // position: absolute;
-    background: white;
+    // background: white;
+    background: $green;
     text-align: center;
     padding-top: 45vh; 
+    min-height: 60vh;
 }
 
 .loading-animation.loading-animation--page {
