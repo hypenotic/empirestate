@@ -1,9 +1,7 @@
 <template>
     <div>
         <div v-if="loading==false">
-            
-                <app-nav v-bind:menu-links="menuLinks" v-bind:menu-color="dark"></app-nav>
-            
+            <app-nav v-bind:menu-links="menuLinks" v-bind:menu-color="dark"></app-nav>
             <transition name="fade">
                 <router-view :page-list="pages" :load-check="loading"></router-view>
             </transition> 
@@ -63,7 +61,8 @@
             getMenu: function() {
               var app = this
 
-              axios.get('http://dev.hypenotic.com/cms-empire/wp-json/wp-api-menus/v2/menus/2')
+            // axios.get('http://dev.hypenotic.com/cms-empire/wp-json/wp-api-menus/v2/menus/2')
+            axios.get('http://cms.empirestateconnector.com/wp-json/wp-api-menus/v2/menus/2')
               .then(function (response) {
                 app.menuLinks = response.data.items;
                 console.log(response.data);
@@ -77,7 +76,8 @@
               // DEV
               // axios.get('http://cms.empire.dev/wp-json/wp/v2/pages?_embed')
               // HYPE
-              axios.get('http://dev.hypenotic.com/cms-empire/wp-json/wp/v2/pages?_embed')
+            //   axios.get('http://dev.hypenotic.com/cms-empire/wp-json/wp/v2/pages?_embed')
+            axios.get('http://cms.empirestateconnector.com/wp-json/wp/v2/pages?_embed')
               .then(function (response) {
                 app.pages = response.data;
                 for (let page of response.data) {
@@ -115,7 +115,7 @@ html, body {
     font-size: 18px;
     font-weight: 300;
     // line-height: 1.5rem;
-    @media #{$large-and-up} {
+    @media #{$medium-and-up} {
         font-size: 24px;
         line-height: 1.5rem;
     }
@@ -150,8 +150,13 @@ em {
 }
 
 body {
-margin: 0;
-/* background: #34393f; */
+    margin: 0;
+    /* background: #34393f; */
+    // position: relative;
+}
+
+body.noscroll {
+    overflow: none;
 }
 
 // TYPE
@@ -182,10 +187,10 @@ margin: 0;
     h1 {
         /* position: relative; */
         font-size: 12vw;
-        line-height: 12vw;
-        padding-top: 24%;
+        line-height: 13vw;
+        padding-top: 130px;
         text-transform: uppercase;
-        @media #{$large-and-up} {
+        @media #{$medium-and-up} {
             font-size: 6vw;
             line-height: 6vw;
             padding-top: 160px;
@@ -205,14 +210,14 @@ margin: 0;
         @media #{$small-and-down} {
             width: 95%;
             font-size: 6vw;
-            line-height: 7vw;
+            line-height: 7.5vw;
         }
     }
 }
 
 .overview,
 .overview p {    
-    @media #{$large-and-up} {
+    @media #{$medium-and-up} {
         font-size: 32px;
         line-height: 40px;
 	}

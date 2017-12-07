@@ -1,6 +1,9 @@
 <template>
 <!-- Why don't I just do a check for home... -->
-<div v-if="scrolled == true" id="scrolling" class="nav-background">
+<div v-if="scrolled == true" id="scrolling" class="nav-background" v-bind:class="{ 'menu-open': showMobileMenu }">
+	<div id="mobile-menu-trigger" v-on:click="showMobileMenu = !showMobileMenu">
+		<i class="fa fa-bars" aria-hidden="true"></i>
+	</div>
 	<div class="nav-container">
 		<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
 			<nav class="uk-navbar light-nav" v-if="$route.path == '/'">
@@ -103,7 +106,10 @@
 		</div>
 	</div>
 </div>
-<div v-else class="nav-background">
+<div v-else class="nav-background" v-bind:class="{ 'menu-open': showMobileMenu }">
+	<div id="mobile-menu-trigger" v-on:click="showMobileMenu = !showMobileMenu">
+		<i class="fa fa-bars" aria-hidden="true"></i>
+	</div>
 	<div class="nav-container">
 		<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
 			<nav class="uk-navbar dark-nav" v-if="$route.path == '/news'">
@@ -203,7 +209,8 @@
         data: function () {
             return {
 				// menuLinks: [] 
-				scrolled: false
+				scrolled: false,
+				showMobileMenu: false
             }
 		},
         methods: {
@@ -240,9 +247,35 @@ nav {
 	width: 100%;
 }
 
+#mobile-menu-trigger {
+	display: none;
+	&:hover {
+		cursor: pointer;
+	}
+	i {
+		color: $white;
+		font-size: 30px;
+	}
+	@media #{$small-and-down} {
+		display: block;
+		position: fixed; 
+		right: 30px;
+		top: 15px;
+		z-index: 5000000;
+    }
+	
+}
+
 .nav-background {
 	transition: all 0.5s ease;
 	background: transparent;
+	@media #{$small-and-down} {
+		height: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 400000;
+    }
 }
 
 .nav-background#scrolling {
@@ -255,6 +288,18 @@ nav {
 	// height: 40px;
 	position: fixed;
 	z-index: 4000;
+	@media #{$small-and-down} {
+        height: 60px;
+    }
+}
+
+.nav-background.menu-open,
+.nav-background.menu-open#scrolling {
+	@media #{$small-and-down} {
+		height: 100vh;
+		width: 100%;
+		background: $main-accent;
+    }
 }
 
 .uk-navbar-left .nav-logo {
@@ -263,12 +308,20 @@ nav {
 	width: auto;
 	display: block;
 	margin-top: 20px;
+	@media #{$small-and-down} {
+		max-height: 70px;
+		margin-left: 5px;
+    }
 }
 
 #scrolling {
 	.uk-navbar-left .nav-logo {
 		max-height: 50px;
 		margin-top: 0px;
+		@media #{$small-and-down} {
+			max-height: 40px;
+			margin-top: 10px;
+		}
 	}
 	.uk-navbar.light-nav {
 		a {
@@ -287,7 +340,12 @@ a.external-link {
 	border: 1px solid rgba(255,255,255,0.3);
 	height: 50%;
 	// vertical-align: middle;
-	margin-top: 15.5%;
+	@media #{$small-and-down} {
+		padding: 10px 0;
+    }
+	@media #{$medium-and-up} {
+		margin-top: 15.5%;
+    }
 	&:hover {
 		border: 1px solid $main-accent;
 		background: $main-accent;
@@ -296,9 +354,11 @@ a.external-link {
 }
 
 .external-link.external-link--hide {
-	transition: all 0.2s ease;
-	position: absolute;
-	right: -1000px;
+	@media #{$medium-and-up} {
+		transition: all 0.2s ease;
+		position: absolute;
+		right: -1000px;
+    }
 }
 
 #scrolling a.external-link {
@@ -357,6 +417,30 @@ a.external-link {
 			transition: $thetransition;
 		}
 		
+	}
+	@media #{$small-and-down} {
+		display: none;
+    }
+}
+
+.uk-navbar {
+	@media #{$small-and-down} {
+		display: block;
+	}
+}
+
+.menu-open {
+	.uk-navbar-right {
+		@media #{$small-and-down} {
+			display: block;
+			margin: 50px auto 0;;
+			ul {
+				display: block;
+			}
+			li a {
+				font-size: 32px !important;
+			}
+		}
 	}
 }
 

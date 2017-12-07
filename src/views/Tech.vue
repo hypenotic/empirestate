@@ -115,7 +115,7 @@
     left:0;
     z-index: 200;
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
     @media #{$large-and-up} {
         height: 500px;
 	}
@@ -134,6 +134,7 @@
             }
             div.tech__cable_overview {
                 width: 50%; 
+                padding: 0 42px 0 0;
             }
         }
     }

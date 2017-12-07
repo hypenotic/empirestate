@@ -138,6 +138,9 @@
     }
     a {
         color: $white;
+        @media #{$small-and-down} {
+            font-size: 1rem !important;
+        }
     }
     .uk-button.uk-button-primary {
         font-family: $heading-type;
@@ -217,12 +220,31 @@ z-index: 400;
         div.home__tech_overview {
             padding: 30px;
         }
+        @media #{$medium-and-up} {
+            // margin-top: 40px;
+            // display: flex;
+            // justify-content: space-between;
+            div.home__tech_image {
+                // width: 50%; 
+                img {
+                    height: 400px;
+                    width: auto;
+                    display: block;
+                    margin: 0 auto;
+                }
+                
+            }
+        }
         @media #{$large-and-up} {
             margin-top: 40px;
             display: flex;
             justify-content: space-between;
             div.home__tech_image {
                 width: 50%; 
+                img {
+                    height: auto;
+                    width: auto;
+                }
             }
             div.home__tech_overview {
                 width: 50%; 
@@ -243,7 +265,7 @@ z-index: 400;
                 margin-bottom: 32px;
             }
         }
-        @media #{$large-and-up} {
+        @media #{$medium-and-up} {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -266,13 +288,13 @@ z-index: 400;
         max-width: 1300px;
         margin: 0 auto;
         list-style-type: none;
-        @media #{$large-and-up} {
+        @media #{$medium-and-up} {
             margin-bottom: 100px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             li {
-                width: 25%;
+                width: 30%;
                 >div {
                     padding: 16px;
                 }
@@ -280,6 +302,11 @@ z-index: 400;
                     font-size: 0.9em;
                     line-height: 1.5em;
                 }
+            }
+        }
+        @media #{$large-and-up} {
+            li {
+                width: 25%;
             }
         }
 

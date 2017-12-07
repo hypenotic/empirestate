@@ -94,7 +94,8 @@
                 } else {
                     console.log('news - loading');
                     this.getPage(this.pageList);
-                    axios.get('http://dev.hypenotic.com/cms-empire/wp-json/wp/v2/posts?_embed')
+                    // axios.get('http://dev.hypenotic.com/cms-empire/wp-json/wp/v2/posts?_embed')
+                    axios.get('http://cms.empirestateconnector.com/wp-json/wp/v2/posts?_embed')
                     .then(function (response) {
                         console.log(response.data);
                         app.posts = response.data;
