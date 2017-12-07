@@ -63,8 +63,8 @@
             getMenu: function() {
               var app = this
 
-            // axios.get('http://dev.hypenotic.com/cms-empire/wp-json/wp-api-menus/v2/menus/2')
-            axios.get('http://cms.empirestateconnector.com/wp-json/wp-api-menus/v2/menus/2')
+            axios.get('http://dev.hypenotic.com/cms-empire/wp-json/wp-api-menus/v2/menus/2')
+            // axios.get('http://cms.empirestateconnector.com/wp-json/wp-api-menus/v2/menus/2')
               .then(function (response) {
                 app.menuLinks = response.data.items;
                 console.log(response.data);
@@ -78,8 +78,8 @@
               // DEV
               // axios.get('http://cms.empire.dev/wp-json/wp/v2/pages?_embed')
               // HYPE
-            //   axios.get('http://dev.hypenotic.com/cms-empire/wp-json/wp/v2/pages?_embed')
-            axios.get('http://cms.empirestateconnector.com/wp-json/wp/v2/pages?_embed')
+              axios.get('http://dev.hypenotic.com/cms-empire/wp-json/wp/v2/pages?_embed')
+            // axios.get('http://cms.empirestateconnector.com/wp-json/wp/v2/pages?_embed')
               .then(function (response) {
                 app.pages = response.data;
                 for (let page of response.data) {
