@@ -11547,10 +11547,10 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
 
 // Vue.axios.defaults.headers.common['X-WP-Nonce'] = wp_api_vuejs_poc.nonce;
 
-const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
+var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
 	routes: __WEBPACK_IMPORTED_MODULE_4__routes__["a" /* routes */],
 	mode: 'history',
-	scrollBehavior(to, from, savedPosition) {
+	scrollBehavior: function scrollBehavior(to, from, savedPosition) {
 		if (to.hash) {
 			console.log('HASH');
 			return {
@@ -11568,8 +11568,10 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('App', __WEBPACK_IMPORTED_
 
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 	el: '#app',
-	router,
-	render: h => h(__WEBPACK_IMPORTED_MODULE_6__App_vue__["a" /* default */])
+	router: router,
+	render: function render(h) {
+		return h(__WEBPACK_IMPORTED_MODULE_6__App_vue__["a" /* default */]);
+	}
 });
 
 /***/ }),
@@ -25940,6 +25942,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof="fun
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routes; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__views_Home_vue__ = __webpack_require__(369);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__views_Benefits_vue__ = __webpack_require__(386);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__views_Tech_vue__ = __webpack_require__(391);
@@ -25953,11 +25956,9 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof="fun
 
 
 
-const routes = [
+var routes = [
 // ==== DEV ====
 { path: '/benefits', component: __WEBPACK_IMPORTED_MODULE_1__views_Benefits_vue__["a" /* default */], props: true }, { path: '/tech', component: __WEBPACK_IMPORTED_MODULE_2__views_Tech_vue__["a" /* default */], props: true }, { path: '/contact', component: __WEBPACK_IMPORTED_MODULE_3__views_Contact_vue__["a" /* default */], props: true }, { path: '/blog', component: __WEBPACK_IMPORTED_MODULE_4__views_blog_Blog_vue__["a" /* default */], props: true }, { path: '/news/:slug', component: __WEBPACK_IMPORTED_MODULE_4__views_blog_Blog_vue__["a" /* default */], props: true }, { path: '/news', component: __WEBPACK_IMPORTED_MODULE_4__views_blog_Blog_vue__["a" /* default */], props: true }, { path: '', component: __WEBPACK_IMPORTED_MODULE_0__views_Home_vue__["a" /* default */], props: true }, { path: '/', component: __WEBPACK_IMPORTED_MODULE_0__views_Home_vue__["a" /* default */], props: true }, { path: '*', redirect: '/' }];
-/* harmony export (immutable) */ __webpack_exports__["a"] = routes;
-
 
 /***/ }),
 /* 369 */
@@ -26143,31 +26144,52 @@ module.exports = function listToStyles (parentId, list) {
         theContent: __WEBPACK_IMPORTED_MODULE_0__components_content_vue__["a" /* default */],
         appFooter: __WEBPACK_IMPORTED_MODULE_1__components_Footer_vue__["a" /* default */]
     },
-    data: function () {
+    data: function data() {
         return {
             selected: [],
             featImage: ""
         };
     },
     props: ['pageList', 'loadCheck'],
-    created: function () {
+    created: function created() {
         console.log('home');
         this.getPage(this.pageList);
     },
     watch: {
-        selected: function (newVal) {
+        selected: function selected(newVal) {
             this.selected = newVal;
         }
     },
     methods: {
-        getPage(pages) {
-            for (let page of pages) {
-                // console.log(page.slug);
-                if (page.slug == 'home') {
-                    console.log('found it');
-                    // console.log(page);
-                    this.selected = page;
-                    break;
+        getPage: function getPage(pages) {
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = pages[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var page = _step.value;
+
+                    // console.log(page.slug);
+                    if (page.slug == 'home') {
+                        console.log('found it');
+                        // console.log(page);
+                        this.selected = page;
+                        break;
+                    }
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
                 }
             }
         }
@@ -26251,11 +26273,12 @@ exports.push([module.i, "", ""]);
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     props: ['bodyCopy'],
-    data: function () {
+    data: function data() {
         return {};
     },
-    beforeMount() {},
-    mounted: function () {},
+    beforeMount: function beforeMount() {},
+
+    mounted: function mounted() {},
     computed: {},
     methods: {}
 });
@@ -26362,16 +26385,16 @@ __WEBPACK_IMPORTED_MODULE_0_es6_promise___default.a.polyfill();
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     props: ['pageList', 'loadCheck'],
-    data: function () {
+    data: function data() {
         return {
             footerContent: []
         };
     },
-    created: function () {
+    created: function created() {
         console.log('FOOTER LOADED');
     },
     methods: {
-        getFooter() {
+        getFooter: function getFooter() {
             var app = this;
             if (app.footerContent.length > 0) {
                 // setTimeout(function(){ app.blogLoad = false }, 1000);
@@ -26389,9 +26412,10 @@ __WEBPACK_IMPORTED_MODULE_0_es6_promise___default.a.polyfill();
             }
         }
     },
-    beforeMount() {
+    beforeMount: function beforeMount() {
         this.getFooter();
     },
+
     computed: {}
 });
 
@@ -26518,24 +26542,45 @@ exports.push([module.i, ".overlay[data-v-7e83dbe3]:before{content:\"\";display:b
         appFooter: __WEBPACK_IMPORTED_MODULE_0__components_Footer_vue__["a" /* default */]
     },
     props: ['pageList', 'loadCheck'],
-    data: function () {
+    data: function data() {
         return {
             selected: []
         };
     },
-    created: function () {
+    created: function created() {
         console.log('about');
         this.getPage(this.pageList);
     },
     methods: {
-        getPage(pages) {
-            for (let page of pages) {
-                console.log(page.slug);
-                if (page.slug == 'benefits') {
-                    console.log('found it');
-                    console.log(page);
-                    this.selected = page;
-                    break;
+        getPage: function getPage(pages) {
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = pages[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var page = _step.value;
+
+                    console.log(page.slug);
+                    if (page.slug == 'benefits') {
+                        console.log('found it');
+                        console.log(page);
+                        this.selected = page;
+                        break;
+                    }
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
                 }
             }
         }
@@ -26668,24 +26713,45 @@ exports.push([module.i, ".overlay[data-v-1b31e2dc]:before{content:\"\";display:b
         // theContent: Content,
         appFooter: __WEBPACK_IMPORTED_MODULE_0__components_Footer_vue__["a" /* default */]
     },
-    data: function () {
+    data: function data() {
         return {
             selected: []
         };
     },
-    created: function () {
+    created: function created() {
         console.log('about');
         this.getPage(this.pageList);
     },
     methods: {
-        getPage(pages) {
-            for (let page of pages) {
-                console.log(page.slug);
-                if (page.slug == 'tech') {
-                    console.log('found it');
-                    console.log(page);
-                    this.selected = page;
-                    break;
+        getPage: function getPage(pages) {
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = pages[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var page = _step.value;
+
+                    console.log(page.slug);
+                    if (page.slug == 'tech') {
+                        console.log('found it');
+                        console.log(page);
+                        this.selected = page;
+                        break;
+                    }
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
                 }
             }
         }
@@ -26760,24 +26826,45 @@ var Component = normalizeComponent(
         // theContent: Content,
         appFooter: __WEBPACK_IMPORTED_MODULE_0__components_Footer_vue__["a" /* default */]
     },
-    data: function () {
+    data: function data() {
         return {
             selected: []
         };
     },
     props: ['pageList'],
-    mounted: function () {
+    mounted: function mounted() {
         this.getPage(this.pageList);
     },
     methods: {
-        getPage(pages) {
-            for (let page of pages) {
-                console.log(page.slug);
-                if (page.slug == 'contact') {
-                    console.log('found it');
-                    console.log(page);
-                    this.selected = page;
-                    break;
+        getPage: function getPage(pages) {
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = pages[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var page = _step.value;
+
+                    console.log(page.slug);
+                    if (page.slug == 'contact') {
+                        console.log('found it');
+                        console.log(page);
+                        this.selected = page;
+                        break;
+                    }
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
                 }
             }
         }
@@ -26932,7 +27019,7 @@ __WEBPACK_IMPORTED_MODULE_0_es6_promise___default.a.polyfill();
         appFooter: __WEBPACK_IMPORTED_MODULE_3__components_Footer_vue__["a" /* default */]
     },
     props: ['pageList'],
-    data: function () {
+    data: function data() {
         return {
             selected: [],
             posts: [],
@@ -26941,26 +27028,48 @@ __WEBPACK_IMPORTED_MODULE_0_es6_promise___default.a.polyfill();
         };
     },
     watch: {
-        blogLoad: function (newStatus) {
+        blogLoad: function blogLoad(newStatus) {
             this.blogLoad = newStatus;
         }
     },
-    beforeMount() {
+    beforeMount: function beforeMount() {
         this.getPosts();
     },
+
     methods: {
-        getPage(pages) {
-            for (let page of pages) {
-                console.log(page.slug);
-                if (page.slug == 'news') {
-                    console.log('found it');
-                    console.log(page);
-                    this.selected = page;
-                    break;
+        getPage: function getPage(pages) {
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = pages[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var page = _step.value;
+
+                    console.log(page.slug);
+                    if (page.slug == 'news') {
+                        console.log('found it');
+                        console.log(page);
+                        this.selected = page;
+                        break;
+                    }
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
                 }
             }
         },
-        getPosts() {
+        getPosts: function getPosts() {
             var app = this;
             if (app.posts.length > 0) {
                 // setTimeout(function(){ app.blogLoad = false }, 1000);
@@ -28901,7 +29010,7 @@ __WEBPACK_IMPORTED_MODULE_0_es6_promise___default.a.polyfill();
     components: {
         appNav: __WEBPACK_IMPORTED_MODULE_3__components_Nav_vue__["a" /* default */]
     },
-    data: function () {
+    data: function data() {
         return {
             loading: true,
             menuLinks: [],
@@ -28911,20 +29020,21 @@ __WEBPACK_IMPORTED_MODULE_0_es6_promise___default.a.polyfill();
             aboutPage: []
         };
     },
-    beforeMount() {
+    beforeMount: function beforeMount() {
         this.getMenu();
         this.getPages();
     },
-    mounted: function () {
+
+    mounted: function mounted() {
         // this.isLoaded();
     },
     watch: {
-        loading: function (newLoading) {
+        loading: function loading(newLoading) {
             this.loading = newLoading;
         }
     },
     computed: {
-        isLoaded: function () {
+        isLoaded: function isLoaded() {
             if (this.hasOwnProperty('pages') && this.pages.length > 0) {
                 console.log('LOADED');
                 return true;
@@ -28934,7 +29044,7 @@ __WEBPACK_IMPORTED_MODULE_0_es6_promise___default.a.polyfill();
         }
     },
     methods: {
-        getMenu: function () {
+        getMenu: function getMenu() {
             var app = this;
 
             __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('http://dev.hypenotic.com/cms-empire/wp-json/wp-api-menus/v2/menus/2')
@@ -28946,7 +29056,7 @@ __WEBPACK_IMPORTED_MODULE_0_es6_promise___default.a.polyfill();
                 console.log(error);
             });
         },
-        getPages: function () {
+        getPages: function getPages() {
             var app = this;
             // DEV
             // axios.get('http://cms.empire.dev/wp-json/wp/v2/pages?_embed')
@@ -28955,14 +29065,37 @@ __WEBPACK_IMPORTED_MODULE_0_es6_promise___default.a.polyfill();
             // axios.get('http://cms.empirestateconnector.com/wp-json/wp/v2/pages?_embed')
             .then(function (response) {
                 app.pages = response.data;
-                for (let page of response.data) {
-                    console.log(page.slug);
-                    if (page.slug == 'home') {
-                        // console.log('found it');
-                        app.homePage = page;
-                        break;
+                var _iteratorNormalCompletion = true;
+                var _didIteratorError = false;
+                var _iteratorError = undefined;
+
+                try {
+                    for (var _iterator = response.data[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                        var page = _step.value;
+
+                        console.log(page.slug);
+                        if (page.slug == 'home') {
+                            // console.log('found it');
+                            app.homePage = page;
+                            break;
+                        }
                     }
-                };
+                } catch (err) {
+                    _didIteratorError = true;
+                    _iteratorError = err;
+                } finally {
+                    try {
+                        if (!_iteratorNormalCompletion && _iterator.return) {
+                            _iterator.return();
+                        }
+                    } finally {
+                        if (_didIteratorError) {
+                            throw _iteratorError;
+                        }
+                    }
+                }
+
+                ;
                 setTimeout(function () {
                     app.loading = false;
                 }, 1000);
@@ -29250,7 +29383,7 @@ exports.push([module.i, "nav[data-v-009d4c68]{width:100%}#mobile-menu-trigger[da
 // import VueAxios from 'vue-axios';
 /* harmony default export */ __webpack_exports__["a"] = ({
 	props: ['menuLinks', 'menuColor'],
-	data: function () {
+	data: function data() {
 		return {
 			// menuLinks: [] 
 			scrolled: false,
@@ -29258,7 +29391,7 @@ exports.push([module.i, "nav[data-v-009d4c68]{width:100%}#mobile-menu-trigger[da
 		};
 	},
 	methods: {
-		handleScroll: function (event) {
+		handleScroll: function handleScroll(event) {
 			// console.log(window.scrollY);
 			if (window.scrollY > 20) {
 				this.scrolled = true;
@@ -29267,14 +29400,14 @@ exports.push([module.i, "nav[data-v-009d4c68]{width:100%}#mobile-menu-trigger[da
 			}
 		}
 	},
-	created: function () {
+	created: function created() {
 		window.addEventListener('scroll', this.handleScroll);
 	},
-	destroyed: function () {
+	destroyed: function destroyed() {
 		window.removeEventListener('scroll', this.handleScroll);
 	},
 	computed: {
-		contactCheck: function (slug) {
+		contactCheck: function contactCheck(slug) {
 			// this.menuLinks
 			if (slug !== 'home' || slug == 'contact') {
 				return true;
