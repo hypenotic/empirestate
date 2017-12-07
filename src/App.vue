@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-if="loading==false">
-            <app-nav v-bind:menu-links="menuLinks" v-bind:menu-color="dark"></app-nav>
+            <app-nav v-bind:menu-links="menuLinks"></app-nav>
             <transition name="fade">
                 <router-view :page-list="pages" :load-check="loading"></router-view>
             </transition> 
