@@ -204,7 +204,8 @@ body.noscroll {
             line-height: 64px;
         }
     }
-    h2 {
+    h2,
+    h2 p {
         margin-top: 10px;
         width: 80%;
         font-weight: 300;
