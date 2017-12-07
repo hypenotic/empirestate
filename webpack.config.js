@@ -3,7 +3,9 @@ var webpack = require('webpack')
 const PrerenderSpaPlugin = require('prerender-spa-plugin')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    app: ['babel-polyfill','./src/main.js']
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
