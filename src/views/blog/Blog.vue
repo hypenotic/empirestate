@@ -51,6 +51,8 @@
 </template>
 
 <script>
+    import es6Promise from 'es6-promise';
+    es6Promise.polyfill();
     import axios from 'axios';
     import Footer from '../../components/Footer.vue';
     export default {
