@@ -1,7 +1,7 @@
 <template>
     <div class="view view--home">
-        <div class="banner banner--home">
-            <div class="home-container" :style="{ 'background-image': 'url(' + selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url + ')'}"><div></div></div>
+        <div class="banner banner--home" :style="{ 'background-image': 'url(' + selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url + ')'}">
+            <!-- <div class="home-container" :style="{ 'background-image': 'url(' + selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url + ')'}"><div></div></div> -->
             <div class="overlay"></div>
             <div class="main-banner-content uk-container uk-container-large">
                 <h1 v-html="selected.meta_box.es_banner_heading"></h1>
@@ -132,6 +132,8 @@
 .banner.banner--home {
     position: relative;
     min-height: 90vh;
+    background-size: cover;
+    background-position: center center;
     @media #{$large-and-up} {
         min-height: 30vh;
         height: 650px;
@@ -153,19 +155,19 @@
     }
 }
 
-.home-container{
-    width: 100%;
-    height: 90vh;
-    position: absolute;
-    top: 0;
-    left:0;
-    z-index: 200;
-    background-size: cover;
-    background-position: center center;
-    @media #{$large-and-up} {
-        height: 650px;
-	}
-}
+// .home-container{
+//     width: 100%;
+//     height: 90vh;
+//     position: absolute;
+//     top: 0;
+//     left:0;
+//     z-index: 200;
+//     background-size: cover;
+//     background-position: center center;
+//     @media #{$large-and-up} {
+//         height: 650px;
+// 	}
+// }
 
 h1,h2,h3,h4,h5,h6 {
     color: white;

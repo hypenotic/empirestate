@@ -1,7 +1,7 @@
 <template>
     <div class="view view--tech">
-        <div class="banner banner--tech">
-            <div class="tech-container" :style="{ 'background-image': 'url(' + selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url + ')'}"><div></div></div>
+        <div class="banner banner--tech" :style="{ 'background-image': 'url(' + selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url + ')'}">
+            <!-- <div class="tech-container" :style="{ 'background-image': 'url(' + selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url + ')'}"><div></div></div> -->
             <div class="overlay"></div>
             <div class="main-banner-content uk-container uk-container-large">
                 <h1 v-html="selected.meta_box.es_banner_heading"></h1>
@@ -90,6 +90,8 @@
 .banner.banner--tech {
     position: relative;
     min-height: 90vh;
+    background-size: cover;
+    background-position: center center;
     @media #{$large-and-up} {
         min-height: 30vh;
         height: 500px;
@@ -107,19 +109,19 @@
     }
 }
 
-.tech-container{
-    width: 100%;
-    height: 90vh;
-    position: absolute;
-    top: 0;
-    left:0;
-    z-index: 200;
-    background-size: cover;
-    background-position: center center;
-    @media #{$large-and-up} {
-        height: 500px;
-	}
-}
+// .tech-container{
+//     width: 100%;
+//     height: 90vh;
+//     position: absolute;
+//     top: 0;
+//     left:0;
+//     z-index: 200;
+//     background-size: cover;
+//     background-position: center center;
+//     @media #{$large-and-up} {
+//         height: 500px;
+// 	}
+// }
 
 .tech__cable {
     h3 {
