@@ -12,7 +12,7 @@
                 <!-- <img src="http://placehold.it/200x300"> -->
                 <!-- <img :src="selected._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url"> -->
             </div>
-            <vue-particles
+            <!-- <vue-particles
                 color="#ffffff"
                 :particleOpacity="0.2"
                 linesColor="#ffffff"
@@ -29,7 +29,7 @@
                 :clickEffect="true"
                 clickMode="push"
             >
-            </vue-particles>
+            </vue-particles> -->
         </div>
         <div class="uk-container uk-container-large">
             <div v-html="selected.content.rendered" class="overview overview--home padding--top uk-padding-large"></div>
