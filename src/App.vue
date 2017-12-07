@@ -204,10 +204,21 @@ body.noscroll {
             line-height: 64px;
         }
     }
-    h2,
-    h2 p {
+    h2 {
         margin-top: 10px;
         width: 80%;
+        font-weight: 300;
+        line-height: 130%;
+        font-family: $body-type;
+        font-weight: 200;
+        @media #{$small-and-down} {
+            width: 95%;
+            font-size: 6vw;
+            line-height: 7.5vw;
+        }
+    }
+    h2 p {
+        margin-top: 10px;
         font-weight: 300;
         line-height: 130%;
         font-family: $body-type;
