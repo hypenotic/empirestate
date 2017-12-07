@@ -1,5 +1,4 @@
-import es6Promise from 'es6-promise';
-es6Promise.polyfill();
+import 'es6-promise/auto';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import axios from 'axios';
