@@ -16,7 +16,7 @@
                 <ul>
                     <li v-for="bucket in selected.meta_box.es_benefit_buckets" :key="bucket['es_bene_tb_title']">
                         <h3 v-html="bucket['es_bene_tb_title']"></h3>
-                        <div v-html="bucket['es_bene_tb_copy']"></div>
+                        <div v-html="bucket['es_bene_tb_copy']" class="bucket-copy"></div>
                     </li>
                 </ul>
             </div>
@@ -138,6 +138,9 @@
 
         }
     }
+}
+
+.view--benefits {
 }
 
 </style>

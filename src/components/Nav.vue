@@ -257,6 +257,14 @@
 
 nav {
 	width: 100%;
+	a {
+		color: $main-accent;
+		font-size: 0.6rem !important;
+		// line-height: 0.8rem !important;
+		&:hover {
+			color: lighten($main-accent, 5);
+		}
+	}
 }
 
 #mobile-menu-trigger {

@@ -141,17 +141,14 @@ h2 {
 
 a {
     color: $main-accent;
-    font-size: 0.6rem !important;
+    // font-size: 0.6rem !important;
     // line-height: 0.8rem !important;
     &:hover {
         color: lighten($main-accent, 5);
     }
 }
 
-.contentItalic,
-em {
-    color: $white;
-}
+
 
 body {
     margin: 0;
@@ -236,6 +233,15 @@ blockquote {
             line-height: 7.5vw;
         }
     }
+    .contentItalic,
+    em {
+        color: $white;
+    }
+}
+
+.contentItalic,
+em {
+    color: #666;
 }
 
 .overview,

@@ -199,6 +199,7 @@
         letter-spacing: 0.7px;
         background: $main-accent;
         margin-top: 8px;
+        font-size: 0.6rem !important;
         &:hover {
             background: lighten($main-accent, 5);
         }
@@ -236,8 +237,8 @@ h3 {
 }
 
 h4 {
-    // color: #666;
-    color: $main-accent;
+    color: #666;
+    // color: $main-accent;
     text-transform: uppercase;
     font-size: 32px;
 }

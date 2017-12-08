@@ -5,3 +5,5 @@ robots.txt
 node_modules/
 cms/
 cms/*
+old-files/
+old-files/*
