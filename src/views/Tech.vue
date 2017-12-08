@@ -31,11 +31,11 @@
             <div class="uk-switcher uk-margin">
                 <div>
                     <div class="tabs--image"><img :src="selected.meta_box.es_tech_uw_img" alt="land image"></div>
-                    <div v-html="selected.meta_box.es_tech_uw_copy"></div>
+                    <div v-html="selected.meta_box.es_tech_uw_copy" class="tab-content"></div>
                 </div>
                 <div>
                     <div class="tabs--image"><img :src="selected.meta_box.es_tech_land_img" alt="land image"></div>
-                    <div v-html="selected.meta_box.es_tech_land_copy"></div>
+                    <div v-html="selected.meta_box.es_tech_land_copy" class="tab-content"></div>
                 </div>
             </div>
         </div>
@@ -169,6 +169,11 @@
         background: $main-accent;
         color: $white;
     }
+}
+
+.tab-content {
+    max-width: 864px;
+    margin: 0 auto;
 }
 
 .tabs--image {

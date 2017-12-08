@@ -14,13 +14,13 @@
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
 						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
-							<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
+							<router-link v-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
 								{{ link.title }}
 							</router-link>
-							<router-link v-else-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
+							<router-link v-else-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
-							<router-link v-else :to="`/${link.object_slug}`">
+							<router-link v-else to="/">
 								{{ link.title }}
 							</router-link>
 							<span></span>
@@ -35,10 +35,10 @@
 					</ul>
 					<ul v-else class="uk-navbar-nav">
 						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
-							<router-link v-if="`${link.object_slug}` == 'home'" to="/" >
+							<router-link v-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
 							{{ link.title }}
 							</router-link>
-							<router-link v-else-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
+							<router-link v-else-if="`${link.object_slug}` == 'home'" to="/">
 								{{ link.title }}
 							</router-link>
 							<router-link v-else :to="`/${link.object_slug}`">
@@ -63,13 +63,13 @@
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
 						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
-							<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
+							<router-link v-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
 								{{ link.title }}
 							</router-link>
-							<router-link v-else-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
+							<router-link v-else-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
-							<router-link v-else :to="`/${link.object_slug}`">
+							<router-link v-else to="/">
 								{{ link.title }}
 							</router-link>
 							<span></span>
@@ -83,10 +83,10 @@
 					</ul>
 					<ul v-else class="uk-navbar-nav">
 						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
-							<router-link v-if="`${link.object_slug}` == 'home'" to="/" >
+							<router-link v-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
 							{{ link.title }}
 							</router-link>
-							<router-link v-else-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
+							<router-link v-else-if="`${link.object_slug}` == 'home'" to="/">
 								{{ link.title }}
 							</router-link>
 							<router-link v-else :to="`/${link.object_slug}`">
@@ -120,7 +120,13 @@
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
 						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
-							<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
+							<router-link v-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
+							{{ link.title }}
+							</router-link>
+							<router-link v-else-if="`${link.object_slug}` == 'home'" to="/">
+								{{ link.title }}
+							</router-link>
+							<router-link v-else :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
 							<span></span>
@@ -162,7 +168,13 @@
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
 						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
-							<router-link v-if="`${link.object_slug}` !== 'home'" :to="`/${link.object_slug}`">
+							<router-link v-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
+							{{ link.title }}
+							</router-link>
+							<router-link v-else-if="`${link.object_slug}` == 'home'" to="/">
+								{{ link.title }}
+							</router-link>
+							<router-link v-else :to="`/${link.object_slug}`">
 								{{ link.title }}
 							</router-link>
 							<span></span>

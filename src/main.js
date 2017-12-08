@@ -22,7 +22,7 @@ const router = new VueRouter({
 			console.log('HASH');
 			return {
 			  selector: to.hash
-			  // , offset: { x: 0, y: 10 }
+			  , offset: { x: 0, y: 100 }
 			}
 		} else {
 			return { x: 0, y: 0 }
