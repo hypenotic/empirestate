@@ -56,7 +56,7 @@
                 </ul>
             </div>
         </div>
-        <div class="home__quick-facts">
+        <div class="uk-container home__quick-facts">
             <h3 v-html="selected.meta_box.es_home_qf_heading"></h3>
             <ul>
                 <li v-for="fact in selected.meta_box.es_fact_list" :key="fact['es_fact_item_title']">   
@@ -348,7 +348,7 @@ z-index: 400;
             li {
                 width: 30%;
                 >div {
-                    padding: 16px;
+                    //padding: 16px;
                 }
                 >div >div {
                     font-size: 0.9em;
@@ -358,7 +358,8 @@ z-index: 400;
         }
         @media #{$large-and-up} {
             li {
-                width: 25%;
+                width: 23%;
+                padding-bottom: 16px;
             }
         }
 
