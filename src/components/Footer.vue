@@ -55,8 +55,8 @@
                     // setTimeout(function(){ app.blogLoad = false }, 1000);
                 } else {
                     console.log('footer - loading');
-                    axios.get('http://dev.hypenotic.com/cms-empire/wp-json/wp/v2/footer?per_page=1&_embed')
-                    // axios.get('http://cms.empirestateconnector.com/wp-json/wp/v2/footer?per_page=1&_embed')
+                    // axios.get('http://dev.hypenotic.com/cms-empire/wp-json/wp/v2/footer?per_page=1&_embed')
+                    axios.get('http://cms.empirestateconnector.com/wp-json/wp/v2/footer?per_page=1&_embed')
                     .then(function (response) {
                         console.log(response.data);
                         app.footerContent = response.data;

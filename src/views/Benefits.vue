@@ -15,7 +15,7 @@
             <div class="uk-padding-large">
                 <ul>
                     <li v-for="bucket in selected.meta_box.es_benefit_buckets" :key="bucket['es_bene_tb_title']">
-                        <h4 v-html="bucket['es_bene_tb_title']"></h4>
+                        <h3 v-html="bucket['es_bene_tb_title']"></h3>
                         <div v-html="bucket['es_bene_tb_copy']"></div>
                     </li>
                 </ul>
@@ -78,6 +78,8 @@
 .banner.banner--benefits {
     position: relative;
     min-height: 90vh;
+    background-size: cover;
+    background-position: top center;
     @media #{$large-and-up} {
         min-height: 30vh;
         height: 500px;
@@ -112,6 +114,30 @@
 .overview--benefits {
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.benefits__buckets {
+    max-width: 864px;
+    margin: 0 auto;
+    >div {
+        padding-top: 0;
+    }
+    >div >ul {
+        list-style-type: none;
+       
+        >li {
+            margin-bottom: 50px;
+            @media #{$large-and-up} {
+                margin-bottom: 100px;
+            }
+            >div {
+                margin-left: 24px;
+            }
+        }
+        h3 {
+
+        }
+    }
 }
 
 </style>

@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="uk-container uk-container-large">
-            <div v-html="selected.content.rendered" class="overview overview--benefits padding--top uk-padding"></div>
+            <div v-html="selected.content.rendered" class="overview overview--tech padding--top uk-padding-large"></div>
         </div>
         <div class="uk-container uk-container-large tech__cable">
             <h3 v-html="selected.meta_box.es_cable_heading"></h3>
@@ -29,8 +29,14 @@
             </div>
 
             <div class="uk-switcher uk-margin">
-                <div v-html="selected.meta_box.es_tech_uw_copy"></div>
-                <div v-html="selected.meta_box.es_tech_land_copy"></div>
+                <div>
+                    <div class="tabs--image"><img :src="selected.meta_box.es_tech_uw_img" alt="land image"></div>
+                    <div v-html="selected.meta_box.es_tech_uw_copy"></div>
+                </div>
+                <div>
+                    <div class="tabs--image"><img :src="selected.meta_box.es_tech_land_img" alt="land image"></div>
+                    <div v-html="selected.meta_box.es_tech_land_copy"></div>
+                </div>
             </div>
         </div>
         <app-footer></app-footer>
@@ -84,7 +90,7 @@
     left: 0;
     width: 100%;
     z-index: 300;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .banner.banner--tech {
@@ -107,6 +113,11 @@
         //     background: lighten(orange, 5);
         // }
     }
+}
+
+.overview--tech {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 // .tech-container{
@@ -157,6 +168,15 @@
     button.uk-active {
         background: $main-accent;
         color: $white;
+    }
+}
+
+.tabs--image {
+    text-align: center;
+    margin: 42px 0;
+    img {
+        max-height: 300px;
+        width: auto;
     }
 }
 
