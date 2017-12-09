@@ -117,21 +117,20 @@
 }
 
 .benefits__buckets {
-    max-width: 864px;
+    max-width: 1000px;
     margin: 0 auto;
     >div {
         padding-top: 0;
     }
     >div >ul {
         list-style-type: none;
-       
         >li {
             margin-bottom: 50px;
             @media #{$large-and-up} {
                 margin-bottom: 100px;
             }
             >div {
-                margin-left: 24px;
+                // margin-left: 24px;
             }
         }
         h3 {
@@ -140,7 +139,11 @@
     }
 }
 
-.view--benefits {
+.benefits__buckets {
+    ul {
+        padding: 0;
+    }
 }
+
 
 </style>

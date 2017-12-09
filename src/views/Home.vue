@@ -259,7 +259,7 @@ z-index: 400;
 }
 
 .overview--home {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -337,10 +337,20 @@ z-index: 400;
     h3 {
         text-align: center;
     }
+    @media #{$small-and-down} {
+        h4 {
+            margin-bottom: 10px;
+        }
+    }
     ul {
         max-width: 1300px;
         margin: 0 auto;
         list-style-type: none;
+        @media #{$small-and-down} {
+            li {
+                margin-bottom: 40px;
+            }
+        }
         @media #{$medium-and-up} {
             margin-bottom: 100px;
             display: flex;

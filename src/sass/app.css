@@ -1,0 +1,14 @@
+.bucket-copy li {
+    margin-bottom: 8px;
+}
+
+.home__quick-facts span {
+    font-size: 100px;
+}
+
+@media (max-width: 400px) {
+    .home__quick-facts span {
+        font-size: 40px;
+        line-height: 1rem;
+    }
+}

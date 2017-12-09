@@ -13,7 +13,7 @@
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
-						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<router-link v-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
 								{{ link.title }}
 							</router-link>
@@ -25,7 +25,7 @@
 							</router-link>
 							<span></span>
 						</li>
-						<li v-else :key="`menu-item-${link.object_slug}`">
+						<li v-else :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<a :href="link.url" target="_blank" class="external-link external-link--hide">
 								{{ link.title }}
 							</a>
@@ -34,7 +34,7 @@
 
 					</ul>
 					<ul v-else class="uk-navbar-nav">
-						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<router-link v-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
 							{{ link.title }}
 							</router-link>
@@ -46,7 +46,7 @@
 							</router-link>
 							<span></span>
 						</li>
-						<li v-else :key="`menu-item-${link.object_slug}`">
+						<li v-else :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<a :href="link.url" target="_blank" class="external-link">
 								{{ link.title }}
 							</a>
@@ -62,7 +62,7 @@
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
-						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<router-link v-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
 								{{ link.title }}
 							</router-link>
@@ -74,7 +74,7 @@
 							</router-link>
 							<span></span>
 						</li>
-						<li v-else :key="`menu-item-${link.object_slug}`">
+						<li v-else :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<a :href="link.url" target="_blank" class="external-link external-link--hide">
 								{{ link.title }}
 							</a>
@@ -82,7 +82,7 @@
 						</li>
 					</ul>
 					<ul v-else class="uk-navbar-nav">
-						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<router-link v-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
 							{{ link.title }}
 							</router-link>
@@ -94,7 +94,7 @@
 							</router-link>
 							<span></span>
 						</li>
-						<li v-else :key="`menu-item-${link.object_slug}`">
+						<li v-else :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<a :href="link.url" target="_blank" class="external-link">
 								{{ link.title }}
 							</a>
@@ -119,7 +119,7 @@
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
-						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<router-link v-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
 							{{ link.title }}
 							</router-link>
@@ -131,7 +131,7 @@
 							</router-link>
 							<span></span>
 						</li>
-						<li v-else :key="`menu-item-${link.object_slug}`">
+						<li v-else :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<a :href="link.url" target="_blank" class="external-link external-link--hide">
 								{{ link.title }}
 							</a>
@@ -139,7 +139,7 @@
 						</li>
 					</ul>
 					<ul v-else class="uk-navbar-nav">
-						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<router-link v-if="`${link.object_slug}` == 'home'" to="/" >
 							{{ link.title }}
 							</router-link>
@@ -151,7 +151,7 @@
 							</router-link>
 							<span></span>
 						</li>
-						<li v-else :key="`menu-item-${link.object_slug}`">
+						<li v-else :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<a :href="link.url" target="_blank" class="external-link">
 								{{ link.title }}
 							</a>
@@ -167,7 +167,7 @@
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
-						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<router-link v-if="`${link.object_slug}` == 'contact'" :to="'#footer-anchor'">
 							{{ link.title }}
 							</router-link>
@@ -179,7 +179,7 @@
 							</router-link>
 							<span></span>
 						</li>
-						<li v-else :key="`menu-item-${link.object_slug}`">
+						<li v-else :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<a :href="link.url" target="_blank" class="external-link external-link--hide">
 								{{ link.title }}
 							</a>
@@ -187,7 +187,7 @@
 						</li>
 					</ul>
 					<ul v-else class="uk-navbar-nav">
-						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`">
+						<li v-for="link in menuLinks" v-if="`${link.object_slug}` !== 'esc-solicitation'" :key="`menu-item-${link.object_slug}`" v-on:click="showMobileMenu = !showMobileMenu">
 							<router-link v-if="`${link.object_slug}` == 'home'" to="/" >
 							{{ link.title }}
 							</router-link>
