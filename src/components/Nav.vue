@@ -264,7 +264,7 @@
 			} else if (window.attachEvent){
 				window.attachEvent('scroll', this.handleScroll);
 			} else {
-				window.bind('scroll', this.handleScroll);
+				jQuery(window).on('scroll', this.handleScroll);
 				console.log('IE');
 			}
 		},
@@ -274,6 +274,8 @@
 				window.removeEventListener('scroll', this.handleScroll);
 			} else if (window.attachEvent){
 				window.detachEvent('scroll', this.handleScroll);
+			} else {
+				
 			}
 		},
 		computed: {
