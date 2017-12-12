@@ -273,7 +273,7 @@
 			} else if (window.attachEvent){
 				window.detachEvent('scroll', this.handleScroll);
 			} else {
-				
+				window.removeEventListener('scroll', this.handleScroll);
 			}
 		},
 		computed: {
