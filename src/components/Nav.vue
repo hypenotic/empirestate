@@ -236,10 +236,20 @@
 			}
 		},
 		created: function () {
-			window.addEventListener('scroll', this.handleScroll);
+			// window.addEventListener('scroll', this.handleScroll);
+			if (window.addEventListener){
+				window.addEventListener('scroll', this.handleScroll);
+			} else if (window.attachEvent){
+				window.attachEvent('scroll', this.handleScroll);
+			}
 		},
 		destroyed: function () {
-			window.removeEventListener('scroll', this.handleScroll);
+			// window.removeEventListener('scroll', this.handleScroll);
+			if (window.addEventListener){
+				window.removeEventListener('scroll', this.handleScroll);
+			} else if (window.attachEvent){
+				window.detachEvent('scroll', this.handleScroll);
+			}
 		},
 		computed: {
 			contactCheck: function (slug) {
