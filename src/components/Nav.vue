@@ -228,10 +228,32 @@
         methods: {
 			handleScroll: function (event) {
 				// console.log(window.scrollY);
-				if (window.scrollY > 20) {
-					this.scrolled = true;
+				// if (window.scrollY > 20) {
+				// 	this.scrolled = true;
+				// } else {
+				// 	this.scrolled = false;	
+				// }
+				if (window.addEventListener){
+					console.log(window.scrollY);
+					if (window.scrollY > 20) {
+						this.scrolled = true;
+					} else {
+						this.scrolled = false;	
+					}
+				} else if (window.attachEvent){
+					console.log(window.scrollY);
+					if (window.scrollY > 20) {
+						this.scrolled = true;
+					} else {
+						this.scrolled = false;	
+					}
 				} else {
-					this.scrolled = false;	
+					if (window.pageYOffset > 20) {
+						console.log(window.pageYOffset);
+						this.scrolled = true;
+					} else {
+						this.scrolled = false;	
+					}
 				}
 			}
 		},
@@ -241,6 +263,9 @@
 				window.addEventListener('scroll', this.handleScroll);
 			} else if (window.attachEvent){
 				window.attachEvent('scroll', this.handleScroll);
+			} else {
+				window.bind('scroll', this.handleScroll);
+				console.log('IE');
 			}
 		},
 		destroyed: function () {
