@@ -11547,32 +11547,31 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
 
 // Vue.axios.defaults.headers.common['X-WP-Nonce'] = wp_api_vuejs_poc.nonce;
 
-var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
+const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
 	routes: __WEBPACK_IMPORTED_MODULE_4__routes__["a" /* routes */],
 	mode: 'history',
-	scrollBehavior: function scrollBehavior(to, from, savedPosition) {
+	scrollBehavior (to, from, savedPosition) {
 		if (to.hash) {
 			console.log('HASH');
 			return {
-				selector: to.hash,
-				offset: { x: 0, y: 100 }
-			};
+			  selector: to.hash
+			  , offset: { x: 0, y: 100 }
+			}
 		} else {
-			return { x: 0, y: 0 };
+			return { x: 0, y: 0 }
 		}
 	}
 });
 
 
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('App', __WEBPACK_IMPORTED_MODULE_6__App_vue__["a" /* default */]);
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component( 'App', __WEBPACK_IMPORTED_MODULE_6__App_vue__["a" /* default */] );
 
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 	el: '#app',
-	router: router,
-	render: function render(h) {
-		return h(__WEBPACK_IMPORTED_MODULE_6__App_vue__["a" /* default */]);
-	}
-});
+  	router,
+  	render: h => h(__WEBPACK_IMPORTED_MODULE_6__App_vue__["a" /* default */])
+})
+
 
 /***/ }),
 /* 344 */
@@ -25942,7 +25941,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof="fun
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routes; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__views_Home_vue__ = __webpack_require__(369);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__views_Benefits_vue__ = __webpack_require__(386);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__views_Tech_vue__ = __webpack_require__(391);
@@ -25956,9 +25954,20 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof="fun
 
 
 
-var routes = [
-// ==== DEV ====
-{ path: '/benefits', component: __WEBPACK_IMPORTED_MODULE_1__views_Benefits_vue__["a" /* default */], props: true }, { path: '/tech', component: __WEBPACK_IMPORTED_MODULE_2__views_Tech_vue__["a" /* default */], props: true }, { path: '/contact', component: __WEBPACK_IMPORTED_MODULE_3__views_Contact_vue__["a" /* default */], props: true }, { path: '/blog', component: __WEBPACK_IMPORTED_MODULE_4__views_blog_Blog_vue__["a" /* default */], props: true }, { path: '/news/:slug', component: __WEBPACK_IMPORTED_MODULE_4__views_blog_Blog_vue__["a" /* default */], props: true }, { path: '/news', component: __WEBPACK_IMPORTED_MODULE_4__views_blog_Blog_vue__["a" /* default */], props: true }, { path: '', component: __WEBPACK_IMPORTED_MODULE_0__views_Home_vue__["a" /* default */], props: true }, { path: '/', component: __WEBPACK_IMPORTED_MODULE_0__views_Home_vue__["a" /* default */], props: true }, { path: '*', redirect: '/' }];
+const routes = [
+	// ==== DEV ====
+	{ path: '/benefits', component: __WEBPACK_IMPORTED_MODULE_1__views_Benefits_vue__["a" /* default */], props: true },
+	{ path: '/tech', component: __WEBPACK_IMPORTED_MODULE_2__views_Tech_vue__["a" /* default */], props: true },
+	{ path: '/contact', component: __WEBPACK_IMPORTED_MODULE_3__views_Contact_vue__["a" /* default */], props: true },
+	{ path: '/blog', component: __WEBPACK_IMPORTED_MODULE_4__views_blog_Blog_vue__["a" /* default */], props: true },
+	{ path: '/news/:slug', component: __WEBPACK_IMPORTED_MODULE_4__views_blog_Blog_vue__["a" /* default */], props: true },
+	{ path: '/news', component: __WEBPACK_IMPORTED_MODULE_4__views_blog_Blog_vue__["a" /* default */], props: true },
+	{ path: '', component: __WEBPACK_IMPORTED_MODULE_0__views_Home_vue__["a" /* default */], props: true },
+	{ path: '/', component: __WEBPACK_IMPORTED_MODULE_0__views_Home_vue__["a" /* default */], props: true },
+	{ path: '*', redirect: '/' }
+];
+/* harmony export (immutable) */ __webpack_exports__["a"] = routes;
+
 
 /***/ }),
 /* 369 */
