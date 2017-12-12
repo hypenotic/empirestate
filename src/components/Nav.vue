@@ -227,15 +227,10 @@
 		},
         methods: {
 			handleScroll: function (event) {
-				// console.log(window.scrollY);
-				// if (window.scrollY > 20) {
-				// 	this.scrolled = true;
-				// } else {
-				// 	this.scrolled = false;	
-				// }
 				if (window.addEventListener){
 					console.log('A');
-					if (window.scrollY > 20) {
+					console.log(pageYOffset);
+					if (window.pageYOffset > 20) {
 						this.scrolled = true;
 					} else {
 						this.scrolled = false;	
@@ -260,10 +255,13 @@
 		created: function () {
 			// window.addEventListener('scroll', this.handleScroll);
 			if (window.addEventListener){
+				console.log('Option 1');
 				window.addEventListener('scroll', this.handleScroll);
 			} else if (window.attachEvent){
+				console.log('Option 2');
 				window.attachEvent('scroll', this.handleScroll);
 			} else {
+				console.log('Option 3');
 				jQuery(window).on('scroll', this.handleScroll);
 				console.log('IE');
 			}
