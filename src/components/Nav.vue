@@ -234,14 +234,14 @@
 				// 	this.scrolled = false;	
 				// }
 				if (window.addEventListener){
-					console.log(window.scrollY);
+					console.log('A');
 					if (window.scrollY > 20) {
 						this.scrolled = true;
 					} else {
 						this.scrolled = false;	
 					}
 				} else if (window.attachEvent){
-					console.log(window.scrollY);
+					console.log('B');
 					if (window.scrollY > 20) {
 						this.scrolled = true;
 					} else {
@@ -249,7 +249,7 @@
 					}
 				} else {
 					if (window.pageYOffset > 20) {
-						console.log(window.pageYOffset);
+						console.log('C');
 						this.scrolled = true;
 					} else {
 						this.scrolled = false;	
