@@ -5,10 +5,41 @@
             <div class="main-banner-content uk-container uk-container-large">
                 <h1 v-html="selected.meta_box.es_banner_heading"></h1>
                 <h2 v-html="selected.meta_box.es_banner_subheading"></h2>
-                <a v-html="selected.meta_box.es_banner_cta" class="uk-button uk-button-primary" :href="selected.meta_box.es_banner_link" target="_blank"></a>
+                <div class="banner__cta-section">
+                    <a v-html="selected.meta_box.es_banner_cta" class="uk-button uk-button-primary" :href="selected.meta_box.es_banner_link" target="_blank"></a>
+                    <div class="social-share-container">
+                        <p>Share via:</p>
+                        <social-sharing url="http://empirestateconnector.com"
+                        title="Empire State Connector"
+                        description="oneGRID is developing the Empire State Connector, a 1,000 megawatt High Voltage Direct Current (“HVDC”) electric transmission line connecting Upstate New York with New York City. Efficient and reliable Upstate New York energy will be collected at a converter station built near Utica."
+                        quote="oneGRID is developing the Empire State Connector, a 1,000 megawatt High Voltage Direct Current (“HVDC”) electric transmission line connecting Upstate New York with New York City"
+                        hashtags="onegrid,HVDC,empirestateconnector,energy"
+                        twitter-user="ESC_Corp"
+                        inline-template>
+                        <div class="social-share-buttons">
+                            <network network="email">
+                                <i class="fa fa-envelope"></i> Email
+                            </network>
+                            <network network="twitter">
+                                <i class="fa fa-twitter"></i> Twitter
+                            </network>
+                            <network network="facebook">
+                                <i class="fa fa-facebook"></i> Facebook
+                            </network>
+                            <network network="linkedin">
+                                <i class="fa fa-linkedin"></i> LinkedIn
+                            </network>
+                            <network network="pinterest">
+                                <i class="fa fa-pinterest"></i> Pinterest
+                            </network>
+                        </div>
+                        </social-sharing>
+                    </div>
+                </div>
                 <!-- <the-content :body-copy="selected"></the-content> -->
+                <!-- https://twitter.com/ESC_Corp, https://www.facebook.com/Empire-State-Connector-447498255374978/, https://www.linkedin.com/company/empire-state-connector -->
             </div>
-            <vue-particles
+            <!-- <vue-particles
                 v-if="browserV == false"
                 color="#ffffff"
                 :particleOpacity="0.2"
@@ -25,7 +56,7 @@
                 hoverMode="grab"
                 :clickEffect="true"
                 clickMode="push"
-            ></vue-particles>
+            ></vue-particles> -->
         </div>
         <div class="uk-container uk-container-large">
             <div v-html="selected.content.rendered" class="overview overview--home padding--top uk-padding-large"></div>
@@ -176,14 +207,43 @@
         }
     }
     .uk-button.uk-button-primary {
+        vertical-align: top;
         font-family: $heading-type;
         letter-spacing: 0.7px;
         background: $main-accent;
-        margin-top: 8px;
+        // margin-top: 8px;
         font-size: 0.6rem !important;
         &:hover {
             background: lighten($main-accent, 5);
         }
+    }
+}
+
+.banner__cta-section {
+    margin-top: 32px;
+}
+
+.social-share-container {
+    vertical-align: top;
+    // display: inline-block;
+    // margin-top: 10px;
+    @media #{$large-and-up} {
+        display: inline-block;
+        margin-left: 32px;
+    }
+    p, div {
+        display: inline-block;
+        font-family: $heading-type;
+        font-size: 0.6rem;
+        line-height: 0.6rem;
+    }
+    p {
+        margin: 0;
+        // padding-top: 20px;
+        text-transform: uppercase;
+    }
+    >div {
+
     }
 }
 

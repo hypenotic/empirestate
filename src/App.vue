@@ -326,4 +326,21 @@ em {
   }
 }
 
+// Third Party Component
+.social-share-buttons {
+    span {
+        margin-left: 16px;
+        display: inline-block;
+        padding-top: 5px;
+        i {
+             display: inline-block;
+             margin-right: 3px;
+        }
+        &:hover {
+            color: $main-accent;
+            cursor: pointer;
+        }
+    }
+}
+
 </style>

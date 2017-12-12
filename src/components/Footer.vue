@@ -20,13 +20,20 @@
                 <div class="contact-block">
                     <h5>Contact Us</h5>
                     <div>
-                    <h6>New York Office</h6>
-                    <p>677 Broadway, Suite 1101<br/>Albany, NY, 12207<br/>
-                    <a href="mailto:info@empirestateconnector.com">info@empirestateconnector.com</a></p>
-                    <h6>Toronto Office</h6>
-                    <p>161 Bay Street, Suite 2700<br/>Toronto, ON, M5J 2S1<br/>
-                    <a href="mailto:info@empirestateconnector.com">info@empirestateconnector.com</a></p>
+                        <h6>New York Office</h6>
+                        <p>677 Broadway, Suite 1101<br/>Albany, NY, 12207<br/>
+                        <a href="mailto:info@empirestateconnector.com">info@empirestateconnector.com</a></p>
+                        <h6>Toronto Office</h6>
+                        <p>161 Bay Street, Suite 2700<br/>Toronto, ON, M5J 2S1<br/>
+                        <a href="mailto:info@empirestateconnector.com">info@empirestateconnector.com</a></p>
                     </div>  
+                    <h5>Connect Via</h5>
+                    <ul class="footer-social-share">
+                        <!-- https://twitter.com/ESC_Corp, https://www.facebook.com/Empire-State-Connector-447498255374978/, https://www.linkedin.com/company/empire-state-connector -->
+                        <li><a href="https://twitter.com/ESC_Corp" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                        <li><a href="https://www.facebook.com/Empire-State-Connector-447498255374978/"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+                        <li><a href="https://www.linkedin.com/company/empire-state-connector"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -172,6 +179,22 @@ footer {
         justify-content: space-between;
         >div {
             width: 28%;
+        }
+    }
+}
+
+.footer-social-share {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+        i {
+            margin-right: 10px;
+        }
+        a {
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 }
