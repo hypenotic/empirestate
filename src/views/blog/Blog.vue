@@ -177,6 +177,9 @@
             width: 25%;
         }
     }
+    .post-type {
+        font-size: 0.8rem;
+    }
 }
 
 </style>
