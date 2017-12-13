@@ -193,7 +193,7 @@
 
 .banner.banner--home {
     position: relative;
-    min-height: 90vh;
+    min-height: 100vh;
     background-size: cover;
     background-position: center center;
     @media #{$large-and-up} {
@@ -227,6 +227,10 @@
     vertical-align: top;
     // display: inline-block;
     // margin-top: 10px;
+    @media #{$small-and-down} {
+        padding: 0 1px;
+        margin-top: 16px;
+    }
     @media #{$large-and-up} {
         display: inline-block;
         margin-left: 32px;

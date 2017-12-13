@@ -332,6 +332,10 @@ em {
         margin-left: 16px;
         display: inline-block;
         padding-top: 5px;
+        @media #{$small-and-down} {
+            margin-right: 16px;
+            margin-left: 3px;
+        }
         i {
              display: inline-block;
              margin-right: 3px;
