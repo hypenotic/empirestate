@@ -32,12 +32,12 @@
                         <li><a 
                         href="https://twitter.com/ESC_Corp"
                         target="_blank" 
-                        @click="logName('TWITTER')">
+                        @click="gaSocialClick('Twitter')">
                         <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
                         <li><a href="https://www.facebook.com/Empire-State-Connector-447498255374978/" target="_blank"
-                        @click="logName('FB')"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+                        @click="gaSocialClick('Facebook')"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
                         <li><a href="https://www.linkedin.com/company/empire-state-connector" target="_blank"
-                        @click="logName('LinkedIn')"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+                        @click="gaSocialClick('LinkedIn')"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     })
                 } 
             },
-            logName (clickName) {
+            gaSocialClick(clickName) {
                 this.$ga.event('Social Link', 'click', clickName, 1);
                 console.log(clickName);
             }
