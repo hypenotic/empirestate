@@ -31,14 +31,12 @@
                     <ul class="footer-social-share">
                         <li><a 
                         href="https://twitter.com/ESC_Corp"
-                        target="_blank" v-ga="$ga.commands.trackClick.bind(this, twitterClick)" 
+                        target="_blank" 
                         @click="logName('TWITTER')">
                         <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
                         <li><a href="https://www.facebook.com/Empire-State-Connector-447498255374978/" target="_blank"
-                        v-ga="$ga.commands.trackClick.bind(this, fbClick)" 
                         @click="logName('FB')"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
                         <li><a href="https://www.linkedin.com/company/empire-state-connector" target="_blank"
-                        v-ga="$ga.commands.trackClick.bind(this, liClick)" 
                         @click="logName('LinkedIn')"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
                     </ul>
                 </div>
@@ -85,6 +83,7 @@
                 } 
             },
             logName (clickName) {
+                this.$ga.event('Social Link', 'click', clickName, 1);
                 console.log(clickName);
             }
         },

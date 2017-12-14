@@ -14,15 +14,6 @@ Vue.use(SocialSharing);
 import VueParticles from 'vue-particles';
 Vue.use(VueParticles);
 Vue.use(VueRouter, VueAxios, axios);
-Vue.use(VueAnalytics, {
-	id: 'UA-76790837-1',
-	commands: {
-		trackClick (name = 'unknown') {
-		   this.$ga.track('clickEvent', 'click', 'name', name)
-		}
-	},
-	router
-});
 
 // Vue.axios.defaults.headers.common['X-WP-Nonce'] = wp_api_vuejs_poc.nonce;
 
@@ -40,6 +31,21 @@ const router = new VueRouter({
 			return { x: 0, y: 0 }
 		}
 	}
+});
+
+Vue.use(VueAnalytics, {
+	id: 'UA-76790837-1',
+	// commands: {
+	// 	trackClick (name = 'unknown') {
+	// 	   $ga.track('Social Link', 'click', 'Social Account', name)
+	// 	}
+	// }
+	// debug: {
+	// 	enabled: true,
+	// 	trace: false,
+	// 	sendHitTask: true
+	// },
+	router
 });
 
 import App from './App.vue';
