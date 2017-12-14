@@ -77,7 +77,7 @@
 
 .banner.banner--benefits {
     position: relative;
-    min-height: 90vh;
+    min-height: 60vh;
     background-size: cover;
     background-position: top center;
     @media #{$large-and-up} {
@@ -99,7 +99,7 @@
 
 .benefits-container{
     width: 100%;
-    height: 90vh;
+    height: 60vh;
     position: absolute;
     top: 0;
     left:0;

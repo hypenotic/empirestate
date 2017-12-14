@@ -95,7 +95,7 @@
 
 .banner.banner--tech {
     position: relative;
-    min-height: 90vh;
+    min-height: 70vh;
     background-size: cover;
     background-position: center center;
     @media #{$large-and-up} {
