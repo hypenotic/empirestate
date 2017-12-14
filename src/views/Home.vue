@@ -213,6 +213,9 @@
         background: $main-accent;
         // margin-top: 8px;
         font-size: 0.6rem !important;
+        @media #{$small-and-down} {
+            font-size: 1rem !important;
+        }
         &:hover {
             background: lighten($main-accent, 5);
         }
@@ -240,6 +243,10 @@
         font-family: $heading-type;
         font-size: 0.6rem;
         line-height: 0.6rem;
+        @media #{$small-and-down} {
+            font-size: 0.8rem;
+            line-height: 0.8rem;
+        }
     }
     p {
         margin: 0;

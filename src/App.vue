@@ -188,8 +188,8 @@ blockquote {
     }
     h1 {
         /* position: relative; */
-        font-size: 12vw;
-        line-height: 13vw;
+        font-size: 10vw;
+        line-height: 11vw;
         padding-top: 130px;
         text-transform: uppercase;
         @media #{$medium-and-up} {
@@ -211,8 +211,8 @@ blockquote {
         font-weight: 200;
         @media #{$small-and-down} {
             width: 95%;
-            font-size: 6vw;
-            line-height: 7.5vw;
+            font-size: 5.5vw;
+            line-height: 7vw;
         }
     }
     h2 p {
@@ -223,8 +223,8 @@ blockquote {
         font-weight: 200;
         @media #{$small-and-down} {
             width: 95%;
-            font-size: 6vw;
-            line-height: 7.5vw;
+            font-size: 5.5vw;
+            line-height: 7vw;
         }
     }
     .contentItalic,

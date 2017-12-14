@@ -8,8 +8,8 @@
 		<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
 			<nav class="uk-navbar light-nav" v-if="$route.path == '/'">
 				<div class="uk-navbar-left">
-					<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/empire_state_logo_white.png" alt="Empire State Connector" class="nav-logo"></router-link>
-					<router-link v-else to="/"><img src="../assets/empire_state_logo_white.png" alt="Empire State Connector" class="nav-logo"></router-link>
+					<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/empire_state_connector_logo_white_new.png" alt="Empire State Connector" class="nav-logo"></router-link>
+					<router-link v-else to="/"><img src="../assets/empire_state_connector_logo_white_new.png" alt="Empire State Connector" class="nav-logo"></router-link>
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
@@ -57,8 +57,8 @@
 			</nav>
 			<nav v-else class="uk-navbar light-nav">
 				<div class="uk-navbar-left">
-					<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/empire_state_logo_white.png" alt="Empire State Connector" class="nav-logo"></router-link>
-					<router-link v-else to="/"><img src="../assets/empire_state_logo_white.png" alt="Empire State Connector" class="nav-logo"></router-link>
+					<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/empire_state_connector_logo_white_new.png" alt="Empire State Connector" class="nav-logo"></router-link>
+					<router-link v-else to="/"><img src="../assets/empire_state_connector_logo_white_new.png" alt="Empire State Connector" class="nav-logo"></router-link>
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
@@ -114,8 +114,8 @@
 		<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
 			<nav class="uk-navbar dark-nav" v-if="$route.path == '/news'">
 				<div class="uk-navbar-left">
-					<router-link v-if="$route.path !== '/news'" to="/"><img src="../assets/empire_state_logo_white.png" alt="Empire State Connector" class="nav-logo"></router-link>
-					<router-link v-else to="/"><img src="../assets/empire_state_logo_black.png" alt="Empire State Connector" class="nav-logo"></router-link>
+					<router-link v-if="$route.path !== '/news'" to="/"><img src="../assets/empire_state_connector_logo_white_new.png" alt="Empire State Connector" class="nav-logo"></router-link>
+					<router-link v-else to="/"><img src="../assets/empire_state_connector_logo_black_new.png" alt="Empire State Connector" class="nav-logo"></router-link>
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
@@ -162,8 +162,8 @@
 			</nav>
 			<nav v-else class="uk-navbar light-nav">
 				<div class="uk-navbar-left">
-					<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/empire_state_logo_white.png" alt="Empire State Connector" class="nav-logo"></router-link>
-					<router-link v-else to="/"><img src="../assets/empire_state_logo_white.png" alt="Empire State Connector" class="nav-logo"></router-link>
+					<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/empire_state_connector_logo_white_new.png" alt="Empire State Connector" class="nav-logo"></router-link>
+					<router-link v-else to="/"><img src="../assets/empire_state_connector_logo_white_new.png" alt="Empire State Connector" class="nav-logo"></router-link>
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
@@ -363,12 +363,12 @@ nav {
 
 .uk-navbar-left .nav-logo {
 	transition: all 0.3s ease;
-	max-height: 70px;
+	max-height: 50px;
 	width: auto;
 	display: block;
 	margin-top: 20px;
 	@media #{$small-and-down} {
-		max-height: 70px;
+		max-height: 50px;
 		margin-left: 5px;
     }
 }
