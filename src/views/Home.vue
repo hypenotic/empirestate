@@ -10,10 +10,10 @@
                     <div class="social-share-container">
                         <p>Share via:</p>
                         <social-sharing url="http://empirestateconnector.com"
-                        title="Empire State Connector"
-                        description="oneGRID is developing the Empire State Connector, a 1,000 megawatt High Voltage Direct Current (“HVDC”) electric transmission line connecting Upstate New York with New York City. Efficient and reliable Upstate New York energy will be collected at a converter station built near Utica."
-                        quote="oneGRID is developing the Empire State Connector, a 1,000 megawatt High Voltage Direct Current (“HVDC”) electric transmission line connecting Upstate New York with New York City"
-                        hashtags="onegrid,HVDC,empirestateconnector,energy"
+                        title="Breathe easy. The ESC is connecting the Empire State to its #cleanenergy future."
+                        description="Breathe easy. The Empire State Connector is now soliciting bids from upstate renewable energy generators who want to supply NYC and NYC organizations who want to distribute it."
+                        quote="Breathe easy. The Empire State Connector is now soliciting bids from upstate renewable energy generators who want to supply NYC and NYC organizations who want to distribute it."
+                        hashtags="renewables,ny"
                         twitter-user="ESC_Corp"
                         inline-template>
                         <div class="social-share-buttons">
@@ -29,9 +29,9 @@
                             <network network="linkedin">
                                 <i class="fa fa-linkedin"></i> LinkedIn
                             </network>
-                            <network network="pinterest">
+                            <!-- <network network="pinterest">
                                 <i class="fa fa-pinterest"></i> Pinterest
-                            </network>
+                            </network> -->
                         </div>
                         </social-sharing>
                     </div>
