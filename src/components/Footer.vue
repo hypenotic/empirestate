@@ -1,5 +1,5 @@
 <template>
-    <footer id="footer-anchor" class="">
+    <footer id="contact-info" class="">
         <div class="footer-outer-container">
             <div v-for="footer in footerContent" :key="footer.id" class="footer-container">
                 <div>
