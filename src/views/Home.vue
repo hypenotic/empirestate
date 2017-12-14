@@ -12,7 +12,7 @@
                         <social-sharing url="http://empirestateconnector.com"
                         title="Breathe easy. The ESC is connecting the Empire State to its #cleanenergy future."
                         description="The Empire State Connector is now soliciting bids from upstate renewable energy generators who want to supply NYC and NYC organizations who want to distribute it."
-                        quote="The Empire State Connector is now soliciting bids from upstate renewable energy generators who want to supply NYC and NYC organizations who want to distribute it."
+                        quote="Breathe easy. The Empire State Connector is now soliciting bids from upstate renewable energy generators who want to supply NYC and NYC organizations who want to distribute it."
                         hashtags="renewables,ny"
                         twitter-user="ESC_Corp"
                         inline-template>

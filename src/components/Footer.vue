@@ -31,8 +31,8 @@
                     <ul class="footer-social-share">
                         <!-- https://twitter.com/ESC_Corp, https://www.facebook.com/Empire-State-Connector-447498255374978/, https://www.linkedin.com/company/empire-state-connector -->
                         <li><a href="https://twitter.com/ESC_Corp" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
-                        <li><a href="https://www.facebook.com/Empire-State-Connector-447498255374978/"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
-                        <li><a href="https://www.linkedin.com/company/empire-state-connector"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+                        <li><a href="https://www.facebook.com/Empire-State-Connector-447498255374978/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+                        <li><a href="https://www.linkedin.com/company/empire-state-connector" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
                     </ul>
                 </div>
             </div>

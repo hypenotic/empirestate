@@ -1,5 +1,5 @@
 {
-  "name": "vue-cli",
+  "name": "esc-vue-cli",
   "description": "Empire State Connector",
   "author": "Hypenotic <admin@hypenotic.com>",
   "private": true,
@@ -26,8 +26,7 @@
     "vue-axios": "^2.0.2",
     "vue-loader": "^13.0.5",
     "vue-particles": "^1.0.9",
-    "vue-router": "^2.7.0",
-    "vue-social-sharing": "^2.3.3"
+    "vue-router": "^2.7.0"
   },
   "devDependencies": {
     "babel-polyfill": "^6.26.0",
