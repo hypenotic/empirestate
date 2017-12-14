@@ -10,8 +10,8 @@ import VueAxios from 'vue-axios';
 import { routes } from './routes';
 var SocialSharing = require('vue-social-sharing');
 Vue.use(SocialSharing);
-// import VueParticles from 'vue-particles';
-// Vue.use(VueParticles);
+import VueParticles from 'vue-particles';
+Vue.use(VueParticles);
 Vue.use(VueRouter, VueAxios, axios);
 
 // Vue.axios.defaults.headers.common['X-WP-Nonce'] = wp_api_vuejs_poc.nonce;

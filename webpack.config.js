@@ -61,7 +61,8 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        include: [path.resolve('src'),path.resolve('node_modules/vue-particles')]
+        // exclude: /node_modules/
         // include: [
         //   'src',
         //   'node_modules/vue-particles'

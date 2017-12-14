@@ -39,7 +39,7 @@
                 <!-- <the-content :body-copy="selected"></the-content> -->
                 <!-- https://twitter.com/ESC_Corp, https://www.facebook.com/Empire-State-Connector-447498255374978/, https://www.linkedin.com/company/empire-state-connector -->
             </div>
-            <!-- <vue-particles
+            <vue-particles
                 v-if="browserV == false"
                 color="#ffffff"
                 :particleOpacity="0.2"
@@ -56,7 +56,7 @@
                 hoverMode="grab"
                 :clickEffect="true"
                 clickMode="push"
-            ></vue-particles> -->
+            ></vue-particles>
         </div>
         <div class="uk-container uk-container-large">
             <div v-html="selected.content.rendered" class="overview overview--home padding--top uk-padding-large"></div>
