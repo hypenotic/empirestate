@@ -5,6 +5,7 @@ var Promise = require('es6-promise').Promise;
 require('es6-promise').polyfill();
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VueAnalytics from 'vue-analytics';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import { routes } from './routes';
@@ -13,6 +14,15 @@ Vue.use(SocialSharing);
 import VueParticles from 'vue-particles';
 Vue.use(VueParticles);
 Vue.use(VueRouter, VueAxios, axios);
+Vue.use(VueAnalytics, {
+	id: 'UA-76790837-1',
+	commands: {
+		trackClick (name = 'unknown') {
+		   this.$ga.track('clickEvent', 'click', 'name', name)
+		}
+	},
+	router
+});
 
 // Vue.axios.defaults.headers.common['X-WP-Nonce'] = wp_api_vuejs_poc.nonce;
 
