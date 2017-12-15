@@ -228,15 +228,15 @@
         methods: {
 			handleScroll: function (event) {
 				if (window.addEventListener){
-					console.log('A');
-					console.log(pageYOffset);
+					// console.log('A');
+					// console.log(pageYOffset);
 					if (window.pageYOffset > 20) {
 						this.scrolled = true;
 					} else {
 						this.scrolled = false;	
 					}
 				} else if (window.attachEvent){
-					console.log('B');
+					// console.log('B');
 					if (window.scrollY > 20) {
 						this.scrolled = true;
 					} else {
@@ -244,7 +244,7 @@
 					}
 				} else {
 					if (window.pageYOffset > 20) {
-						console.log('C');
+						// console.log('C');
 						this.scrolled = true;
 					} else {
 						this.scrolled = false;	
@@ -253,21 +253,21 @@
 			},
 			gaContactClick(clickName) {
                 this.$ga.event('Contact Button', 'click', clickName, 1);
-                console.log(clickName);
+                // console.log(clickName);
             }
 		},
 		created: function () {
 			// window.addEventListener('scroll', this.handleScroll);
 			if (window.addEventListener){
-				console.log('Option 1');
+				// console.log('Option 1');
 				window.addEventListener('scroll', this.handleScroll);
 			} else if (window.attachEvent){
-				console.log('Option 2');
+				// console.log('Option 2');
 				window.attachEvent('scroll', this.handleScroll);
 			} else {
-				console.log('Option 3');
+				// console.log('Option 3');
 				jQuery(window).on('scroll', this.handleScroll);
-				console.log('IE');
+				// console.log('IE');
 			}
 		},
 		destroyed: function () {
@@ -306,10 +306,22 @@ nav {
 	}
 }
 
+.uk-navbar {
+	@media #{$xlarge-and-up} {
+		// width: 60% !important;
+		// width: 960px !important;
+		width: 888px !important;
+		// margin: 0% !important;
+		// padding-left: 50px;
+		margin: 0 auto;
+    }
+}
+
 .uk-sticky-fixed {
 	@media #{$xlarge-and-up} {
-		width: 60% !important;
-		margin: 0 5% !important;
+		// width: 60% !important;
+		width: 960px !important;
+		margin: 0% !important;
     }
 }
 
@@ -494,9 +506,16 @@ a.external-link {
 	@media #{$small-and-down} {
 		display: block;
 	}
-	@media #{$large-and-up} {
-		width: 1060px;
-		margin: 0 auto;
+	// @media #{$large-and-up} {
+	// 	width: 1060px !important;
+	// 	margin: 0 auto;
+    // }
+}
+
+.uk-sticky {
+	@media #{$xlarge-and-up} {
+        width: 100% !important;
+		display: block;
     }
 }
 

@@ -39,7 +39,7 @@
             }
         },
         created: function() {
-            console.log('about');
+            // console.log('about');
             this.getPage(this.pageList);
         },
         methods: {

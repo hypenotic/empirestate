@@ -54,10 +54,10 @@
             isLoaded: function() {
                 if (this.hasOwnProperty('pages')
                     && this.pages.length > 0) {
-                    console.log('LOADED');
+                    // console.log('LOADED');
                     return true;
                 }
-                console.log('NOT LOADED');
+                // console.log('NOT LOADED');
                 return false;
             }
         },
@@ -68,7 +68,7 @@
             axios.get('http://cms.empirestateconnector.com/wp-json/wp-api-menus/v2/menus/2')
               .then(function (response) {
                 app.menuLinks = response.data.items;
-                console.log(response.data);
+                // console.log(response.data);
               })
               .catch(function (error) {
                 console.log(error)
@@ -81,7 +81,7 @@
               .then(function (response) {
                 app.pages = response.data;
                 for (let page of response.data) {
-                    console.log(page.slug);
+                    // console.log(page.slug);
                     if (page.slug == 'home') {
                         // console.log('found it');
                         app.homePage = page;
@@ -268,11 +268,13 @@ em {
         margin: 0 4%;
     }
     @media #{$xlarge-and-up} {
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        width: 70% !important;
-        margin: 0 15%;
+        width: 92%;
+        // display: flex;
+        // justify-content: space-between;
+        // position: absolute;
+        // width: 70% !important;
+        margin: 0;
+        // position: relative;
     }
 }
 

@@ -133,7 +133,7 @@
                 if (msie > 0) {
                     // IE 10 or older => return version number
                     // return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-                    console.log('IE10 LESS');
+                    // console.log('IE10 LESS');
                     this.browserV = true;
                 }
 
@@ -142,7 +142,7 @@
                     // IE 11 => return version number
                     var rv = ua.indexOf('rv:');
                     // return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
-                    console.log('IE11');
+                    // console.log('IE11');
                     this.browserV = true;
                 }
 
@@ -150,20 +150,20 @@
                 if (edge > 0) {
                     // Edge (IE 12+) => return version number
                     // return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
-                    console.log('EDGE');
+                    // console.log('EDGE');
                     this.browserV = false;
                 }
 
                 // other browser
                 // return false;
-                console.log('OTHER');
+                // console.log('OTHER');
                 this.browserV = false;
             },
             getPage(pages) {
                 for (let page of pages) {
                     // console.log(page.slug);
                     if (page.slug == 'home') {
-                        console.log('found it');
+                        // console.log('found it');
                         // console.log(page);
                         this.selected = page;
                         break;
