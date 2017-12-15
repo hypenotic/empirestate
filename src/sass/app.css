@@ -12,3 +12,8 @@
         line-height: 1rem;
     }
 }
+
+.tech__cable a,
+.tech__cable a em {
+    color: #2292c1 !important;
+}

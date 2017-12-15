@@ -138,6 +138,10 @@
     h3 {
         text-align: center;
     }
+    // a,
+    // a em {
+    //     color: $main-accent !important;
+    // }
     >div {
         @media #{$large-and-up} {
             display: flex;

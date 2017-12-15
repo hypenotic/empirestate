@@ -389,6 +389,10 @@ z-index: 400;
     h3 {
         text-align: center;
     }
+    h4 {
+        margin-bottom: 8px;
+        line-height: 40px;
+    }
     @media #{$small-and-down} {
         h4 {
             margin-bottom: 10px;
@@ -422,7 +426,7 @@ z-index: 400;
         @media #{$large-and-up} {
             li {
                 width: 23%;
-                padding-bottom: 16px;
+                padding-bottom: 42px;
             }
         }
 
