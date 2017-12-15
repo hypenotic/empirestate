@@ -42,6 +42,9 @@
                 </div>
             </div>
         </div>
+        <div class="footer-credits">
+           <div class="footer-credits-wrapper"> <p>Made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="http://hypenotic.com" target="_blank">Hypenotic</a></p></div>
+        </div>
     </footer>
 </template>
 
@@ -101,7 +104,7 @@
 footer {
     background: darken($main-accent, 30) !important;
     color: $white;
-    padding: 50px 0;
+    padding: 50px 0 0;
     a {
         // font-size: 1rem !important;
     }
@@ -208,6 +211,26 @@ footer {
                 text-decoration: none;
             }
         }
+    }
+}
+.footer-credits {
+    background: darken($main-accent, 30) !important;
+    p {
+        color: $white;
+        text-align: right;
+        margin: 0;
+        font-family: $heading-type;
+        opacity: 0.5;
+        font-size: 0.6rem !important;
+        text-transform: uppercase;
+    }
+    a {
+        font-size: 0.6rem !important;
+    }
+    .footer-credits-wrapper {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 32px 0 16px;
     }
 }
 </style>
