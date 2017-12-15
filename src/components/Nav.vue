@@ -306,6 +306,13 @@ nav {
 	}
 }
 
+.uk-sticky-fixed {
+	@media #{$xlarge-and-up} {
+		width: 60% !important;
+		margin: 0 5% !important;
+    }
+}
+
 #mobile-menu-trigger {
 	display: none;
 	&:hover {
@@ -363,10 +370,11 @@ nav {
 
 .uk-navbar-left .nav-logo {
 	transition: all 0.3s ease;
-	max-height: 50px;
+	max-height: 80px;
 	width: auto;
 	display: block;
 	margin-top: 20px;
+	// opacity: 0.7;
 	@media #{$small-and-down} {
 		max-height: 50px;
 		margin-left: 5px;
@@ -416,7 +424,7 @@ a.external-link {
 	@media #{$medium-and-up} {
 		transition: all 0.2s ease;
 		position: absolute;
-		right: -1000px;
+		right: -1000vw;
     }
 }
 
@@ -486,6 +494,10 @@ a.external-link {
 	@media #{$small-and-down} {
 		display: block;
 	}
+	@media #{$large-and-up} {
+		width: 1060px;
+		margin: 0 auto;
+    }
 }
 
 .menu-open {

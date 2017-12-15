@@ -268,9 +268,11 @@ em {
         margin: 0 4%;
     }
     @media #{$xlarge-and-up} {
-        // position: absolute;
-        // width: 1000px !important;
-        // margin: 0%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 70% !important;
+        margin: 0 15%;
     }
 }
 
