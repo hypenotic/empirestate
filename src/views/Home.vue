@@ -76,6 +76,7 @@
             <div>
                 <ul>
                     <li v-for="bucket in selected.meta_box.es_home_tech_buckets" :key="bucket['es_home_tb_title']">
+                        <img :src="bucket['es_home_tb_img']" alt="" class="tech-bucket__img">
                         <h4 v-html="bucket['es_home_tb_title']"></h4>
                         <div v-html="bucket['es_home_tb_copy']"></div>
                     </li>
@@ -164,7 +165,7 @@
                     // console.log(page.slug);
                     if (page.slug == 'home') {
                         // console.log('found it');
-                        // console.log(page);
+                        console.log(page);
                         this.selected = page;
                         break;
                     }
@@ -379,10 +380,17 @@ z-index: 400;
             }
             li:first-child,
             li:nth-child(2) {
-                margin-bottom: 42px;
+                margin-bottom: 72px;
             }
         }
     }
+}
+
+.tech-bucket__img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .home__quick-facts {
