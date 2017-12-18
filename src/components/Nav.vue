@@ -402,8 +402,8 @@ nav {
 		max-height: 30px;
 		margin-top: 5px;
 		@media #{$small-and-down} {
-			max-height: 40px;
-			margin-top: 10px;
+			max-height: 30px;
+			margin-top: 12px;
 		}
 	}
 	.uk-navbar.light-nav {
