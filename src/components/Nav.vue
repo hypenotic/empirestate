@@ -8,8 +8,8 @@
 		<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
 			<nav class="uk-navbar light-nav" v-if="$route.path == '/'">
 				<div class="uk-navbar-left">
-					<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/empire_state_connector_logo_white_new.png" alt="Empire State Connector" class="nav-logo"></router-link>
-					<router-link v-else to="/"><img src="../assets/empire_state_connector_logo_white_new.png" alt="Empire State Connector" class="nav-logo"></router-link>
+					<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/ESC_Logo_Horizontal_White.png" alt="Empire State Connector" class="nav-logo"></router-link>
+					<router-link v-else to="/"><img src="../assets/ESC_Logo_Horizontal_White.png" alt="Empire State Connector" class="nav-logo"></router-link>
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
@@ -57,8 +57,8 @@
 			</nav>
 			<nav v-else class="uk-navbar light-nav">
 				<div class="uk-navbar-left">
-					<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/empire_state_connector_logo_white_new.png" alt="Empire State Connector" class="nav-logo"></router-link>
-					<router-link v-else to="/"><img src="../assets/empire_state_connector_logo_white_new.png" alt="Empire State Connector" class="nav-logo"></router-link>
+					<router-link v-if="$route.path !== '/'" to="/"><img src="../assets/ESC_Logo_Horizontal_White.png" alt="Empire State Connector" class="nav-logo"></router-link>
+					<router-link v-else to="/"><img src="../assets/ESC_Logo_Horizontal_White.png" alt="Empire State Connector" class="nav-logo"></router-link>
 				</div>
 				<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav" v-if="$route.path == '/'">
@@ -361,7 +361,7 @@ nav {
 	background: $main-accent;
 	// display: fixed;
 	width: 100%;
-	height: 80px;
+	height: 60px;
 	// position: absolute;
 	// height: 40px;
 	position: fixed;
@@ -393,10 +393,14 @@ nav {
     }
 }
 
+.uk-navbar-nav>li>a {
+	transition: all 0.5s ease;
+}
+
 #scrolling {
 	.uk-navbar-left .nav-logo {
-		max-height: 50px;
-		margin-top: 0px;
+		max-height: 30px;
+		margin-top: 5px;
 		@media #{$small-and-down} {
 			max-height: 40px;
 			margin-top: 10px;
@@ -411,6 +415,13 @@ nav {
 				color: rgba(255,255,255,1);
 			}
 		}
+	}
+	.uk-navbar-nav>li>a {
+		height: 40px;
+		margin-top: 10px;
+	}
+	.uk-navbar-right li span {
+		bottom: 6px;
 	}
 }
 
@@ -501,6 +512,8 @@ a.external-link {
 		display: none;
     }
 }
+
+
 
 .uk-navbar {
 	@media #{$small-and-down} {
