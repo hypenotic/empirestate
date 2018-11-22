@@ -55,24 +55,18 @@
         methods: {
             moveVideo(status) {
                 if (status) {
-                    console.log('move1');
                     var vid1wrap = document.getElementById("video-wrap-left");
                     vid1wrap.classList.add('move-back');
-                    console.log('move2');
                     var vid1 = document.getElementById("placeholder-vid-1");
                     vid1.classList.add('move-back');
-                    console.log('move2');
                     var vid2wrap = document.getElementById("video-wrap-right");
                     vid2wrap.classList.add('move-back');
-                    console.log('move3');
                     var vid2 = document.getElementById("placeholder-vid-2");
                     vid2.classList.add('move-back');
                     var cont = document.getElementById("videos");
                     cont.classList.add('move-back');
-                    console.log('move5');
                     var right = document.getElementById("right-arrow");
                     right.classList.add('move-back');
-                    console.log('move4');
                     var left = document.getElementById("left-arrow");
                     left.classList.add('move-back');
 
@@ -83,29 +77,22 @@
 
                     var next = document.getElementById("placeholder-vid-2");
                     var player2 = new Vimeo.Player(next);
-                    
+
                     player2.setCurrentTime(0);
                     player2.play();
                 } else {
-                    console.log('move1');
                     var vid1wrap = document.getElementById("video-wrap-left");
                     vid1wrap.classList.remove('move-back');
-                    console.log('move2');
                     var vid1 = document.getElementById("placeholder-vid-1");
                     vid1.classList.remove('move-back');
-                    console.log('move2');
                     var vid2wrap = document.getElementById("video-wrap-right");
                     vid2wrap.classList.remove('move-back');
-                    console.log('move3');
                     var vid2 = document.getElementById("placeholder-vid-2");
                     vid2.classList.remove('move-back');
-                    console.log('move3');
                     var cont = document.getElementById("videos");
                     cont.classList.remove('move-back');
-                    console.log('move5');
                     var right = document.getElementById("right-arrow");
                     right.classList.remove('move-back');
-                    console.log('move4');
                     var left = document.getElementById("left-arrow");
                     left.classList.remove('move-back');
 
@@ -198,7 +185,7 @@
     &.left.move-back:after {
         background-image: linear-gradient(to left, black 0%, transparent 50%, black 100%);
         top: 0;
-        left: -80vw;
+        left: -83vw;
         width: 100%;
         display: block;
         opacity: 1;
@@ -219,8 +206,6 @@
     }
 }
 
-
-
 .embed-container >div iframe#placeholder-vid-2 { 
     position: absolute; 
     top: 0; 
@@ -231,6 +216,15 @@
     height: 85vh; 
     transition: all 0.5s ease;
 }
+
+#placeholder-vid-1.move-back {
+    left: -73vw !important;
+}
+
+#placeholder-vid-2.move-back {
+    left: 8vw !important;
+}
+
 
 // #videos::after {
 //     display: block;
@@ -279,13 +273,4 @@
 #right-arrow.move-back {
     display: none !important;
 }
-
-#placeholder-vid-1.move-back {
-    left: -70vw !important;
-}
-
-#placeholder-vid-2.move-back {
-    left: 10vw !important;
-}
-
 </style>
