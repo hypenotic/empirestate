@@ -61,6 +61,9 @@
         <div class="uk-container uk-container-large">
             <div v-html="selected.content.rendered" class="overview overview--home padding--top uk-padding-large"></div>
         </div>
+        
+        <app-videos></app-videos>
+
         <div class="home__tech">
             <h3 v-html="selected.meta_box.es_home_tech_heading"></h3>
             <div>
@@ -102,11 +105,13 @@
 
 <script>
     import Content from '../components/content.vue';
+    import Videos from '../components/videos.vue';
     import Footer from '../components/Footer.vue';
     export default {
         components: {
             theContent: Content,
             appFooter: Footer,
+            appVideos: Videos,
         },
         data: function () {
             return {
