@@ -166,10 +166,10 @@
         opacity: 1;
         transition: opacity 0.5s ease;
         width: 100%;
-        // transition-delay: 0.5s;
+        transition-delay: 1s;
     }
     &.right.move-back:after {
-        display: none;
+        // display: none;
         opacity: 0;
         width: 0;
         overflow: hidden;
