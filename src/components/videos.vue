@@ -3,7 +3,7 @@
         <div class="embed-container" id="video-container">
             <div class="video-wrap left" id="video-wrap-left"><iframe src="https://player.vimeo.com/video/302301981?muted=1&autoplay=1&loop=1" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen id="placeholder-vid-1" class=""></iframe></div>
 
-            <div class="video-wrap right" id="video-wrap-right"><iframe src="https://player.vimeo.com/video/302302610" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen id="placeholder-vid-2"></iframe></div>
+            <div class="video-wrap right" id="video-wrap-right"><iframe src="https://player.vimeo.com/video/302302610?muted=1" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen id="placeholder-vid-2"></iframe></div>
 
             <svg width="16px" height="44px" id="right-arrow" v-on:click="moveVideo(true)" viewBox="0 0 16 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs></defs>
@@ -40,6 +40,18 @@
         created: function() {
             console.log('VIDEOS LOADED');
         },
+        mounted: function() {
+            var iframe = document.querySelector('iframe');
+            var player = new Vimeo.Player(iframe);
+
+            player.on('play', function() {
+            console.log('Played the video');
+            });
+
+            player.getVideoTitle().then(function(title) {
+            console.log('title:', title);
+            });
+        },
         methods: {
             moveVideo(status) {
                 if (status) {
@@ -63,6 +75,17 @@
                     console.log('move4');
                     var left = document.getElementById("left-arrow");
                     left.classList.add('move-back');
+
+                    var current = document.getElementById("placeholder-vid-1");
+                    var player1 = new Vimeo.Player(current);
+
+                    player1.pause();
+
+                    var next = document.getElementById("placeholder-vid-2");
+                    var player2 = new Vimeo.Player(next);
+                    
+                    player2.setCurrentTime(0);
+                    player2.play();
                 } else {
                     console.log('move1');
                     var vid1wrap = document.getElementById("video-wrap-left");
@@ -85,6 +108,18 @@
                     console.log('move4');
                     var left = document.getElementById("left-arrow");
                     left.classList.remove('move-back');
+
+                    var current = document.getElementById("placeholder-vid-2");
+                    var player1 = new Vimeo.Player(current);
+
+                    player1.pause();
+
+                    var next = document.getElementById("placeholder-vid-1");
+                    var player2 = new Vimeo.Player(next);
+                   
+                    player2.setCurrentTime(0);
+                    player2.play();
+                    // player2.setVolume(1);
                 }
                 
             },
@@ -140,7 +175,7 @@
     &.right:after {
         background-image: linear-gradient(to right, black 0%, transparent 50%, black 100%);
         top: 0;
-        left: 80vw;
+        left: 83vw;
         opacity: 1;
         transition: opacity 0.5s ease;
         width: 100%;
@@ -156,7 +191,7 @@
         // display: none;
         opacity: 0;
         transition: opacity 0.5s ease;
-        transition-delay: 0.5s;
+        transition-delay: 0.2s;
         width: 0;
         overflow: hidden;
     }
@@ -170,21 +205,26 @@
     }
 }
     
-.embed-container >div iframe#placeholder-vid-1 { 
-    position: absolute; 
-    top: 0; 
-    left: -11vw; 
-    // object-position: center top;
-    // object-position: 100px 50px;
-    width: 100%; 
-    height: 85vh; 
-    transition: all 0.5s ease;
+.embed-container >div {
+    // text-align: left;
+    iframe#placeholder-vid-1 { 
+        position: absolute; 
+        top: 0; 
+        left: calc(-8vw); 
+        // object-position: center top;
+        // object-position: 100px 50px;
+        width: 100%; 
+        height: 85vh; 
+        transition: all 0.5s ease;
+    }
 }
+
+
 
 .embed-container >div iframe#placeholder-vid-2 { 
     position: absolute; 
     top: 0; 
-    left: 70vw; 
+    left: 73vw; 
     // object-position: center top;
     // object-position: 100px 50px;
     width: 100%; 
