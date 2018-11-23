@@ -195,11 +195,12 @@ blockquote {
         @media #{$medium-and-up} {
             font-size: 6vw;
             line-height: 6vw;
-            padding-top: 240px;
+            padding-top: 180px;
         }
         @media #{$xlarge-and-up} {
             font-size: 64px;
             line-height: 64px;
+            padding-top: 200px;
         }
     }
     h2 {
