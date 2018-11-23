@@ -195,7 +195,7 @@ blockquote {
         @media #{$medium-and-up} {
             font-size: 6vw;
             line-height: 6vw;
-            padding-top: 160px;
+            padding-top: 240px;
         }
         @media #{$xlarge-and-up} {
             font-size: 64px;

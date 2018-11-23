@@ -203,9 +203,10 @@
     background-size: cover;
     background-position: center center;
     @media #{$large-and-up} {
-        min-height: 30vh;
+        min-height: 85vh;
         height: 650px;
     }
+    
     a {
         color: $white;
         @media #{$small-and-down} {
