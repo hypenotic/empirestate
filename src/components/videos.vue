@@ -35,62 +35,38 @@
         props: ['pageList', 'loadCheck'],
         data: function () {
             return {
-                vidState: null,
             }
         },
         created: function() {
-            console.log('VIDEOS LOADED');
         },
         mounted: function() {
-            var iframe = document.querySelector('iframe');
-            var player = new Vimeo.Player(iframe);
-
-            player.on('play', function() {
-                console.log('Played the video');
-            });
-
-            player.getVideoTitle().then(function(title) {
-                console.log('title:', title);
-            });
         },
         methods: {
             moveVideo(status) {
                 var movingElements = document.getElementsByClassName('move-item');
-
-
                 if (status) {
                     for (var i = 0; i < movingElements.length; i++) {
                         movingElements[i].classList.add('move-active');
                     }
-
                     var current = document.getElementById("placeholder-vid-1");
                     var player1 = new Vimeo.Player(current);
-
                     player1.pause();
-
                     var next = document.getElementById("placeholder-vid-2");
                     var player2 = new Vimeo.Player(next);
-
                     // player2.setCurrentTime(0);
                     player2.play();
-
                 } else {
                     for (var i = 0; i < movingElements.length; i++) {
                         movingElements[i].classList.remove('move-active');
                     }
-
                     var current = document.getElementById("placeholder-vid-2");
                     var player1 = new Vimeo.Player(current);
-
                     player1.pause();
-
                     var next = document.getElementById("placeholder-vid-1");
                     var player2 = new Vimeo.Player(next);
-
                     // player2.setCurrentTime(0);
                     player2.play();
                 }
-
             },
         },
         computed: {
@@ -100,85 +76,103 @@
 
 <style lang="scss">
     @import '../sass/variables.scss';
-
     
     #videos{
-        width: 100%;
-        overflow: hidden;
-        margin-bottom: 70px;
+        @media #{$medium-and-up} {
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 70px;
+        }
     }
     
     iframe{
-        width: calc(75vw + 100px);
-        height: 90vh;
-        object-fit: cover;
+        @media #{$medium-and-down} {
+            width: 100%;
+            margin: 1rem 0;
+        }
+        @media #{$medium-and-up} {
+            width: calc(75vw + 100px);
+            height: 90vh;
+            object-fit: cover;
+        }
     }
     
     #videos {
-        height: 90vh;
-        .embed-container { 
-            position: relative;
-            display: flex;
-            
+        @media #{$medium-and-up} {
+            height: 90vh;
+            .embed-container { 
+                position: relative;
+                display: flex;
+                
+            }
         }
     }
     
     #placeholder-vid-1, #placeholder-vid-2{
         transition: all 0.5s ease;
-/*        background: black;*/
     }
         
     #placeholder-vid-1.move-active {
-/*        left: -75vw !important;*/
-        margin-left: calc(-50vw - 200px);
-        -webkit-filter: brightness(.25);
-        filter: brightness(.25);
+        @media #{$medium-and-up} {
+            margin-left: calc(-50vw - 200px);
+            -webkit-filter: brightness(.25);
+            filter: brightness(.25);
+        }
     }
     
     #placeholder-vid-2{
-        -webkit-filter: brightness(.25);
-        filter: brightness(.25);
+        @media #{$medium-and-up} {
+            -webkit-filter: brightness(.25);
+            filter: brightness(.25);
+        }
     }
 
     #placeholder-vid-2.move-active {
         -webkit-filter: brightness(1);
         filter: brightness(1);
     }
-    
 
     #right-arrow,
     #left-arrow {
-        z-index: 1;
-        &:hover {
-            cursor: pointer;
-            .arrow {
-                stroke: $blue !important;
+        display: none;
+    }
+
+    @media #{$medium-and-up} {
+        #right-arrow,
+        #left-arrow {
+            z-index: 1;
+            &:hover {
+                cursor: pointer;
+                .arrow {
+                    stroke: $blue !important;
+                }
             }
+            top: 50%;
+            z-index: 1000;
+            transform: translate(0, -50%);
+        } 
+
+        #right-arrow {
+            position: absolute;
+            right: 5vw;
         }
-        top: 50%;
-        z-index: 1000;
-        transform: translate(0, -50%);
-    } 
 
-    #right-arrow {
-        position: absolute;
-        right: 5vw;
-        
-    }
+        #left-arrow {
+            opacity: 0;
+            display: block;
+            position: absolute;
+            left: 5vw !important;
+        }
 
-    #left-arrow {
-        opacity: 0;
-        display: block;
-        position: absolute;
-        left: 5vw !important;
-    }
+        #left-arrow.move-active {
+            opacity: 1;
+        }
 
-    #left-arrow.move-active {
-        opacity: 1;
+        #right-arrow.move-active {
+            display: none !important;
+        }
     }
-
-    #right-arrow.move-active {
-        display: none !important;
-    }
+    
+    
 
 </style>
