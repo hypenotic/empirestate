@@ -105,7 +105,7 @@
     #videos{
         width: 100%;
         overflow: hidden;
-        margin-bottom: 50px;
+        margin-bottom: 70px;
     }
     
     iframe{

@@ -203,7 +203,12 @@
     background-size: cover;
     background-position: center center;
     @media #{$large-and-up} {
-        min-height: 85vh;
+        min-height: 110vh;
+        // height: 650px;
+    }
+    @media #{$xlarge-and-up} {
+        // min-height: 110vh;
+        min-height: 50vh;
         height: 650px;
     }
     
