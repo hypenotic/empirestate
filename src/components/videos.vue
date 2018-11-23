@@ -103,7 +103,6 @@
 
     
     #videos{
-/*        background: black;*/
         width: 100%;
         overflow: hidden;
         margin-bottom: 50px;
