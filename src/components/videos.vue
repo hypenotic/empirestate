@@ -71,7 +71,7 @@
                     var next = document.getElementById("placeholder-vid-2");
                     var player2 = new Vimeo.Player(next);
 
-                    player2.setCurrentTime(0);
+                    // player2.setCurrentTime(0);
                     player2.play();
 
                 } else {
@@ -87,7 +87,7 @@
                     var next = document.getElementById("placeholder-vid-1");
                     var player2 = new Vimeo.Player(next);
 
-                    player2.setCurrentTime(0);
+                    // player2.setCurrentTime(0);
                     player2.play();
                 }
 
