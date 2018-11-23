@@ -116,7 +116,7 @@
     }
     
     #videos {
-        height: 85vh;
+        height: 90vh;
         .embed-container { 
             position: relative;
             display: flex;
@@ -131,7 +131,7 @@
         
     #placeholder-vid-1.move-active {
 /*        left: -75vw !important;*/
-        margin-left: calc(-75vw - 50px);
+        margin-left: calc(-50vw - 200px);
         -webkit-filter: brightness(.25);
         filter: brightness(.25);
     }

@@ -101,6 +101,7 @@
 </script>
 
 <style lang="scss">
+
 // ===== GLOBAL
 @import './sass/variables.scss';
 
@@ -161,6 +162,12 @@ blockquote {
     color: #666;
 }
 
+/*
+::-webkit-scrollbar {
+    width: 10px;
+}
+*/
+    
 // TYPE
 .main-banner-content {
     color: white;
