@@ -134,7 +134,9 @@
 
     #right-arrow,
     #left-arrow {
-        display: none;
+        @media #{$medium-and-down} {
+            display: none;
+        }
     }
 
     @media #{$medium-and-up} {
