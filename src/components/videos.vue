@@ -134,7 +134,7 @@
 
     #right-arrow,
     #left-arrow {
-        @media #{$medium-and-down} {
+        @media #{$small-and-down} {
             display: none;
         }
     }
@@ -156,14 +156,14 @@
 
         #right-arrow {
             position: absolute;
-            right: 5vw;
+            right: 2vw;
         }
 
         #left-arrow {
             opacity: 0;
             display: block;
             position: absolute;
-            left: 5vw !important;
+            left: 2vw !important;
         }
 
         #left-arrow.move-active {
@@ -174,7 +174,15 @@
             display: none !important;
         }
     }
-    
-    
+
+    @media #{$large-and-up} {
+        #right-arrow {
+            right: 5vw;
+        }
+
+        #left-arrow {
+            left: 5vw !important;
+        }
+    }    
 
 </style>
